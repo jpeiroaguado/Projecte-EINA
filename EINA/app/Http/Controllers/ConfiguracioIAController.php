@@ -21,59 +21,27 @@ class ConfiguracioIAController extends Controller
     }
 
     public function index()
-    {
-        $this->autoritzarProfessor();
+{
+    $this->autoritzarProfessor();
 
-        $configuracions = ConfiguracioIA::all();
-        return view('panell-professor.index', compact('configuracions'));
-    }
+    $context_actiu = ContexteClasse::where('actiu', true)
+        ->where('creat_per', auth()->id())
+        ->first();
 
-    public function activar($id)
-    {
-        ConfiguracioIA::query()->update(['activa' => false]);
+    return view('panell-professor.index', compact('context_actiu'));
+}
 
-        $config = ConfiguracioIA::findOrFail($id);
-        $config->update(['activa' => true]);
-
-        return redirect()->back()->with('success', 'Configuració activada');
-    }
-
-    public function create()
-    {
-        $this->autoritzarProfessor();
-
-        $contextos = ContexteClasse::where('creat_per', auth()->id())->get();
-        $config = new ConfiguracioIA();
-
-        return view('panell-professor.edit', compact('config', 'contextos'));
-    }
-
-    public function store(Request $request)
-    {
-        $this->autoritzarProfessor();
-
-        $request->validate([
-            'max_interaccions' => 'required|integer|min:1',
-            'context_id' => 'required|exists:contexts,id',
-        ]);
-
-        ConfiguracioIA::create([
-            'max_interaccions' => $request->input('max_interaccions'),
-            'context_id' => $request->input('context_id'),
-            'activa' => false,
-        ]);
-
-        return redirect()->route('configuracio.index')->with('success', 'Configuració creada.');
-    }
 
     public function edit($id)
     {
         $this->autoritzarProfessor();
 
-        $config = $id == 0 ? new ConfiguracioIA() : ConfiguracioIA::findOrFail($id);
+        $config = ConfiguracioIA::first();
         $contextos = ContexteClasse::where('creat_per', auth()->id())->get();
+        $context_actiu = $contextos->firstWhere('actiu', true);
+        $context_seleccionat = $config?->context_id;
 
-        return view('panell-professor.edit', compact('config', 'contextos'));
+        return view('panell-professor.edit', compact('config', 'contextos', 'context_actiu', 'context_seleccionat'));
     }
 
     public function update(Request $request)
@@ -81,21 +49,33 @@ class ConfiguracioIAController extends Controller
         $this->autoritzarProfessor();
 
         $request->validate([
-            'max_interaccions' => 'required|integer|min:1',
             'context_id' => 'required|exists:contexts,id',
         ]);
 
-        $config = ConfiguracioIA::first(); // Podria ficar findOrFail($id) si passes l'ID
+        $config = ConfiguracioIA::firstOrCreate([], []);
         $config->update([
-            'max_interaccions' => $request->input('max_interaccions'),
             'context_id' => $request->input('context_id'),
         ]);
 
-        return redirect()->route('configuracio.index')->with('success', 'Configuració actualitzada.');
+        ContexteClasse::where('creat_per', auth()->id())->update(['actiu' => false]);
+
+        $contextActiu = ContexteClasse::where('id', $request->input('context_id'))->first();
+        if ($contextActiu) {
+            $contextActiu->update(['actiu' => true]);
+        }
+
+        return redirect()->route('configuracio.index')->with('success', 'Context activat correctament.');
     }
 
-    public function destroy(string $id)
+    public function activar($id)
     {
-        //
+        $this->autoritzarProfessor();
+
+        ConfiguracioIA::query()->update(['activa' => false]);
+
+        $config = ConfiguracioIA::findOrFail($id);
+        $config->update(['activa' => true]);
+
+        return redirect()->back()->with('success', 'Configuració activada.');
     }
 }

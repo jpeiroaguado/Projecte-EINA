@@ -22,6 +22,7 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
+    //Després de loguejarse el redirigim a una vista o un altra depenent de si l'usuari es professor o alumne.
     public function store(LoginRequest $request): RedirectResponse
     {
         $request->authenticate();
@@ -36,7 +37,7 @@ class AuthenticatedSessionController extends Controller
 
         } elseif ($usuari->rol === 'alumne') {
 
-            return redirect()->route('inici');
+            return redirect()->route('alumne.chat');
         }
 
         abort(403, 'Rol no reconegut');

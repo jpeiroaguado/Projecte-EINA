@@ -8,7 +8,7 @@ class Missatge extends Model
 {
     protected $table = 'missatges';
 
-    protected $fillable = ['conversa_id', 'emissor', 'contingut'];
+    protected $fillable = ['conversa_id', 'remitent', 'cos'];
 
     public function conversa()
     {

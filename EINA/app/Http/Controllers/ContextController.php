@@ -7,65 +7,117 @@ use App\Models\ContexteClasse;
 
 class ContextController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-{
-    $contextos = ContexteClasse::all();
-    return view('context.index', compact('contextos'));
-}
+    public function __construct()
+    {
+        $this->middleware('auth');
 
-    /**
-     * Show the form for creating a new resource.
-     */
+        $this->middleware(function ($request, $next) {
+            if (auth()->user()->rol !== 'professor') {
+                abort(403, 'Accés només per a professors');
+            }
+            return $next($request);
+        })->except('show');
+    }
+
     public function create()
     {
-        //
+        return view('contextes.create');
     }
+    public function index()
+    {
+        $this->autoritzarProfessor();
 
-    /**
-     * Store a newly created resource in storage.
-     */
+        $context_actiu = ContexteClasse::where('actiu', true)
+            ->where('creat_per', auth()->id())
+            ->first();
+
+        return view('panell-professor.index', compact('context_actiu'));
+    }
     public function store(Request $request)
-{
-    $request->validate([
-        'nom' => 'required|string|max:255',
-    ]);
-
-    ContexteClasse::create($request->all());
-    return redirect()->back()->with('success', 'Context afegit');
-}
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
     {
-        //
+        $request->validate([
+            'titol' => 'required|string|max:255',
+            'descripcio' => 'nullable|string',
+            'interaccions_max' => 'nullable|integer|min:1'
+        ]);
+
+        ContexteClasse::create([
+            'titol' => $request->input('titol'),
+            'descripcio' => $request->input('descripcio'),
+            'interaccions_max' => $request->input('interaccions_max', 10),
+            'actiu' => false,
+            'creat_per' => auth()->id(),
+        ]);
+
+        return redirect()->back()->with('success', 'Contexte creat exitosament');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function show($id)
     {
-        //
+        $context = ContexteClasse::findOrFail($id);
+        return view('contextes.show', compact('context'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function edit($id)
     {
-        //
+        $context = ContexteClasse::findOrFail($id);
+
+        if ($context->creat_per !== auth()->id()) {
+            abort(403);
+        }
+
+        return view('contextes.edit', compact('context'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function update(Request $request, $id)
+    {
+        $context = ContexteClasse::findOrFail($id);
+
+        if ($context->creat_per !== auth()->id()) {
+            abort(403);
+        }
+
+        $request->validate([
+            'titol' => 'required|string|max:255',
+            'descripcio' => 'nullable|string',
+            'interaccions_max' => 'nullable|integer|min:1'
+        ]);
+
+        $context->update([
+            'titol' => $request->input('titol'),
+            'descripcio' => $request->input('descripcio'),
+            'interaccions_max' => $request->input('interaccions_max', 10),
+        ]);
+
+        return redirect()->back()->with('success', 'Context actualitzat.');
+    }
+
+    public function activate($id)
+    {
+        $usuariId = auth()->id();
+
+        ContexteClasse::where('creat_per', $usuariId)->update(['actiu' => false]);
+
+        $context = ContexteClasse::where('creat_per', $usuariId)->findOrFail($id);
+        $context->update(['actiu' => true]);
+
+        return redirect()->back()->with('success', 'Context activat.');
+    }
+
     public function destroy(string $id)
     {
-        //
+        $context = ContexteClasse::findOrFail($id);
+
+        if ($context->creat_per !== auth()->id()) {
+            abort(403);
+        }
+
+        if ($context->actiu) {
+            return redirect()->back()->with('error', 'No pots eliminar el context actiu. Activa un altre abans.');
+        }
+
+        $context->delete();
+
+        return redirect()->back()->with('success', 'Context eliminat correctament.');
     }
 }

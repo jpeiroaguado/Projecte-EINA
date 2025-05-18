@@ -8,16 +8,16 @@ class Conversa extends Model
 {
     protected $table = 'converses';
 
-    protected $fillable = ['usuari_id', 'context_id'];
+    protected $fillable = ['usuari_id', 'configuracio_ia_id'];
 
     public function usuari()
     {
         return $this->belongsTo(User::class, 'usuari_id');
     }
 
-    public function context()
+    public function configuracioIA()
     {
-        return $this->belongsTo(ContexteClasse::class, 'context_id');
+        return $this->belongsTo(ConfiguracioIA::class, 'configuracio_ia_id');
     }
 
     public function missatges()

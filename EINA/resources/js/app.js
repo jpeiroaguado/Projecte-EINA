@@ -1,4 +1,6 @@
 import './bootstrap';
+import './contextes.js';
+import './nav.js';
 
 import Alpine from 'alpinejs';
 

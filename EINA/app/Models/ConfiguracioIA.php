@@ -8,7 +8,7 @@ class ConfiguracioIA extends Model
 {
     protected $table = 'configuracions_ia';
 
-    protected $fillable = ['activa', 'max_interaccions, context_id'];
+    protected $fillable = ['activa', 'max_interaccions', 'context_id'];
 
     public function context()
     {

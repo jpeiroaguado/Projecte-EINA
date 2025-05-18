@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('context_id')->constrained('contexts')->onDelete('cascade');
             $table->boolean('activa')->default(false);
-            $table->unsignedInteger('max_interaccions')->default(10);
             $table->timestamps();
         });
     }

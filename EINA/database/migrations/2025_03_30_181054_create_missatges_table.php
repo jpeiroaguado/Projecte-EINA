@@ -6,23 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('missatges', function (Blueprint $table) {
             $table->id();
             $table->foreignId('conversa_id')->constrained('converses')->onDelete('cascade');
-            $table->enum('emissor', ['usuari', 'ia']);
-            $table->text('contingut');
+            $table->enum('remitent', ['alumne', 'ia']);
+            $table->text('cos');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('missatges');

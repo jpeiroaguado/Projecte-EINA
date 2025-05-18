@@ -1,39 +1,56 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\IniciController;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContextController;
 use App\Http\Controllers\ConfiguracioIAController;
-use App\Http\Controllers\ConversaController;
-use App\Http\Controllers\MissatgeController;
 
+/*Redirecció inicial segons rol*/
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login'); // Mostra login si no autenticat
 });
 
-// Ruta original de Breeze, cuan faja vistes ja vec si cambiarla
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/redirect-segons-rol', function () {
+    $usuari = Auth::user();
 
-// Perfil d'usuari (ho ha creat tot Breeze... :D)
+    if ($usuari->rol === 'professor') {
+        return redirect()->route('configuracio.index');
+    }
+
+    if ($usuari->rol === 'alumne') {
+        return redirect()->route('alumne.chat');
+    }
+
+    abort(403, 'Rol desconegut');
+})->middleware(['auth', 'verified'])->name('home'); // Laravel Breeze usa aquesta per defecte
+
+/* Perfil d’usuari (Breeze) */
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
-// Rutes comunes per a converses i missatges
-Route::middleware('auth')->group(function () {
+/*Panell del professor (configuració IA)*/
+Route::middleware(['auth'])->group(function () {
     Route::get('/panell-professor', [ConfiguracioIAController::class, 'index'])->name('configuracio.index');
     Route::get('/panell-professor/{id}/edit', [ConfiguracioIAController::class, 'edit'])->name('configuracio.edit');
     Route::put('/panell-professor/{id}', [ConfiguracioIAController::class, 'update'])->name('configuracio.update');
-    Route::post('/panell-professor', [ConfiguracioIAController::class, 'store'])->name('configuracio.store');
-    Route::post('/panell-professor/{id}/activar', [ConfiguracioIAController::class, 'activar'])->name('configuracio.activar');
 });
 
+/*Gestió de contextos/*/
+Route::middleware(['auth'])->group(function () {
+    Route::resource('contextes', ContextController::class)->except(['index']);
+    Route::post('/contextes/{id}/activar', [ContextController::class, 'activate'])->name('contextes.activate');
+});
+
+/*Vista per a l’alumne (xat amb la IA)*/
+Route::middleware('auth')->group(function () {
+    Route::get('/alumne/chat', function () {
+        return view('alumne.chat'); // pots crear resources/views/alumne/chat.blade.php
+    })->name('alumne.chat');
+});
+Route::middleware('auth')->post('/conversa/{id}/missatge', [GeminiController::class, 'enviar'])->name('conversa.enviar');
 
 require __DIR__.'/auth.php';

@@ -9,6 +9,8 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Register any application services.
      */
+    public const HOME = '/redirect-segons-rol';
+
     public function register(): void
     {
         //
