@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ContexteClasse;
+use App\Models\ContextClasse;
 
 class ContextController extends Controller
 {
@@ -27,7 +27,7 @@ class ContextController extends Controller
     {
         $this->autoritzarProfessor();
 
-        $context_actiu = ContexteClasse::where('actiu', true)
+        $context_actiu = ContextClasse::where('actiu', true)
             ->where('creat_per', auth()->id())
             ->first();
 
@@ -41,7 +41,7 @@ class ContextController extends Controller
             'interaccions_max' => 'nullable|integer|min:1'
         ]);
 
-        ContexteClasse::create([
+        ContextClasse::create([
             'titol' => $request->input('titol'),
             'descripcio' => $request->input('descripcio'),
             'interaccions_max' => $request->input('interaccions_max', 10),
@@ -49,18 +49,18 @@ class ContextController extends Controller
             'creat_per' => auth()->id(),
         ]);
 
-        return redirect()->back()->with('success', 'Contexte creat exitosament');
+        return redirect()->back()->with('success', 'Context creat exitosament');
     }
 
     public function show($id)
     {
-        $context = ContexteClasse::findOrFail($id);
+        $context = ContextClasse::findOrFail($id);
         return view('contextes.show', compact('context'));
     }
 
     public function edit($id)
     {
-        $context = ContexteClasse::findOrFail($id);
+        $context = ContextClasse::findOrFail($id);
 
         if ($context->creat_per !== auth()->id()) {
             abort(403);
@@ -71,7 +71,7 @@ class ContextController extends Controller
 
     public function update(Request $request, $id)
     {
-        $context = ContexteClasse::findOrFail($id);
+        $context = ContextClasse::findOrFail($id);
 
         if ($context->creat_per !== auth()->id()) {
             abort(403);
@@ -96,9 +96,9 @@ class ContextController extends Controller
     {
         $usuariId = auth()->id();
 
-        ContexteClasse::where('creat_per', $usuariId)->update(['actiu' => false]);
+        ContextClasse::where('creat_per', $usuariId)->update(['actiu' => false]);
 
-        $context = ContexteClasse::where('creat_per', $usuariId)->findOrFail($id);
+        $context = ContextClasse::where('creat_per', $usuariId)->findOrFail($id);
         $context->update(['actiu' => true]);
 
         return redirect()->back()->with('success', 'Context activat.');
@@ -106,7 +106,7 @@ class ContextController extends Controller
 
     public function destroy(string $id)
     {
-        $context = ContexteClasse::findOrFail($id);
+        $context = ContextClasse::findOrFail($id);
 
         if ($context->creat_per !== auth()->id()) {
             abort(403);

@@ -7,7 +7,7 @@ function toggleDarkMode() {
     if (icon) icon.textContent = isDark ? '🌙' : '🌞';
 }
 
-// Executar quan el DOM estiga carregat
+// Execute quan el DOM esta carregat
 window.addEventListener('DOMContentLoaded', () => {
     const icon = document.getElementById('theme-icon');
     const isDark = localStorage.getItem('theme') === 'dark';
@@ -20,6 +20,6 @@ window.addEventListener('DOMContentLoaded', () => {
         if (icon) icon.textContent = '🌞';
     }
 
-    // Expose globalment la funció perquè puga ser usada pel botó onclick
+    // Expose la funció globalment perquè puga ser usada
     window.toggleDarkMode = toggleDarkMode;
 });

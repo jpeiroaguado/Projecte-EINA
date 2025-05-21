@@ -42,7 +42,7 @@ class User extends Authenticatable
     /* Un usuari pot tindre molts contextos */
     public function contextes()
     {
-        return $this->hasMany(ContexteClasse::class, 'creat_per');
+        return $this->hasMany(ContextClasse::class, 'creat_per');
     }
 
     /* Un usuari pot tindre moltes conversacions */

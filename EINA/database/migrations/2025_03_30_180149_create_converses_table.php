@@ -9,11 +9,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('converses', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('usuari_id')->constrained('usuaris')->onDelete('cascade');
-            $table->foreignId('configuracio_ia_id')->nullable()->constrained('configuracio_ia')->onDelete('set null');
-            $table->timestamps();
-        });
+    $table->id();
+    $table->foreignId('usuari_id')->constrained('usuaris');
+    $table->foreignId('context_id')->constrained('contexts')->onDelete('cascade');
+    $table->string('gemini_history_id')->nullable();
+    $table->unsignedInteger('interaccions_restants')->default(0);
+    $table->timestamps();
+});
+
     }
 
     public function down(): void

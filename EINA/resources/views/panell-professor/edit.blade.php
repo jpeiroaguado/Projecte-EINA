@@ -7,7 +7,7 @@
 
     <h2 class="text-2xl font-bold">⚙️ Panell de configuració</h2>
 
-    {{-- 🔔 Missatges de sessió --}}
+    {{-- Missatges de sessió --}}
     @if(session('success'))
         <div class="mb-4 p-4 bg-green-200 dark:bg-green-700 border border-green-500 text-green-900 dark:text-white rounded">
             {{ session('success') }}
@@ -19,7 +19,7 @@
         </div>
     @endif
 
-    {{-- ⚠️ Missatge si no hi ha contextos --}}
+    {{--  Missatge si no hi ha contextos --}}
     @if ($contextos->isEmpty())
         <div class="mb-4 p-4 border border-yellow-400 bg-yellow-100 dark:bg-yellow-800 text-yellow-700 dark:text-yellow-100 rounded">
             ⚠️ Encara no has creat cap context. Afegeix-ne un per a poder configurar la IA.

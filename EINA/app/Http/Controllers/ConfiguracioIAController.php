@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ConfiguracioIA;
-use App\Models\ContexteClasse;
+use App\Models\ContextClasse;
 use Illuminate\Http\Request;
 
 class ConfiguracioIAController extends Controller
@@ -21,30 +20,28 @@ class ConfiguracioIAController extends Controller
     }
 
     public function index()
-{
-    $this->autoritzarProfessor();
+    {
+        $this->autoritzarProfessor();
 
-    $context_actiu = ContexteClasse::where('actiu', true)
-        ->where('creat_per', auth()->id())
-        ->first();
+        $context_actiu = ContextClasse::where('actiu', true)
+            ->where('creat_per', auth()->id())
+            ->first();
 
-    return view('panell-professor.index', compact('context_actiu'));
-}
-
+        return view('panell-professor.index', compact('context_actiu'));
+    }
 
     public function edit($id)
     {
         $this->autoritzarProfessor();
 
-        $config = ConfiguracioIA::first();
-        $contextos = ContexteClasse::where('creat_per', auth()->id())->get();
+        $contextos = ContextClasse::where('creat_per', auth()->id())->get();
         $context_actiu = $contextos->firstWhere('actiu', true);
-        $context_seleccionat = $config?->context_id;
+        $context_seleccionat = $context_actiu?->id;
 
-        return view('panell-professor.edit', compact('config', 'contextos', 'context_actiu', 'context_seleccionat'));
+        return view('panell-professor.edit', compact('contextos', 'context_actiu', 'context_seleccionat'));
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         $this->autoritzarProfessor();
 
@@ -52,30 +49,15 @@ class ConfiguracioIAController extends Controller
             'context_id' => 'required|exists:contexts,id',
         ]);
 
-        $config = ConfiguracioIA::firstOrCreate([], []);
-        $config->update([
-            'context_id' => $request->input('context_id'),
-        ]);
+        // Desactivar tots els contextos de l’usuari
+        ContextClasse::where('creat_per', auth()->id())->update(['actiu' => false]);
 
-        ContexteClasse::where('creat_per', auth()->id())->update(['actiu' => false]);
-
-        $contextActiu = ContexteClasse::where('id', $request->input('context_id'))->first();
+        // Activar el context seleccionat
+        $contextActiu = ContextClasse::where('id', $request->input('context_id'))->first();
         if ($contextActiu) {
             $contextActiu->update(['actiu' => true]);
         }
 
         return redirect()->route('configuracio.index')->with('success', 'Context activat correctament.');
-    }
-
-    public function activar($id)
-    {
-        $this->autoritzarProfessor();
-
-        ConfiguracioIA::query()->update(['activa' => false]);
-
-        $config = ConfiguracioIA::findOrFail($id);
-        $config->update(['activa' => true]);
-
-        return redirect()->back()->with('success', 'Configuració activada.');
     }
 }

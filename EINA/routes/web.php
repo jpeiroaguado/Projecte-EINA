@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContextController;
+use App\Http\Controllers\ConversaController;
 use App\Http\Controllers\ConfiguracioIAController;
+use App\Http\Controllers\GeminiController;
 
 /*Redirecció inicial segons rol*/
 Route::get('/', function () {
@@ -34,7 +36,10 @@ Route::middleware('auth')->group(function () {
 
 /*Panell del professor (configuració IA)*/
 Route::middleware(['auth'])->group(function () {
-    Route::get('/panell-professor', [ConfiguracioIAController::class, 'index'])->name('configuracio.index');
+    //Route::get('/panell-professor', [ConfiguracioIAController::class, 'index'])->name('configuracio.index');
+    Route::get('/panell-professor', [ConversaController::class, 'panell'])->name('configuracio.index');
+    Route::get('/panell-professor/conversa/{id}', [ConversaController::class, 'carregarPerProfessor'])
+    ->name('professor.carregarConversa');
     Route::get('/panell-professor/{id}/edit', [ConfiguracioIAController::class, 'edit'])->name('configuracio.edit');
     Route::put('/panell-professor/{id}', [ConfiguracioIAController::class, 'update'])->name('configuracio.update');
 });
@@ -47,10 +52,8 @@ Route::middleware(['auth'])->group(function () {
 
 /*Vista per a l’alumne (xat amb la IA)*/
 Route::middleware('auth')->group(function () {
-    Route::get('/alumne/chat', function () {
-        return view('alumne.chat'); // pots crear resources/views/alumne/chat.blade.php
-    })->name('alumne.chat');
+    Route::get('/alumne/chat', [ConversaController::class, 'xatAmbIA'])->name('alumne.chat');
+    Route::post('/conversa/{id}/missatge', [GeminiController::class, 'enviar'])->name('conversa.enviar');
 });
-Route::middleware('auth')->post('/conversa/{id}/missatge', [GeminiController::class, 'enviar'])->name('conversa.enviar');
 
 require __DIR__.'/auth.php';

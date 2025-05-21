@@ -17,7 +17,7 @@ window.mostrarFormulariContext = function () {
     // Reinicia el formulari per a crear (no editar)
     const formElement = document.getElementById('nou-context-form');
     formElement.action = '/contextes';
-    // Elimina qualsevol input hidden _method
+    // Elimine qualsevol input hidden _method
     const methodInput = formElement.querySelector('input[name="_method"]');
     if (methodInput) methodInput.remove();
 };

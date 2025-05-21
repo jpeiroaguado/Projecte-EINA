@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('titol');
             $table->text('descripcio')->nullable();
+            $table->string('descripcio_curta')->nullable(); // <- arreglat
             $table->integer('interaccions_max')->default(10);
             $table->boolean('actiu')->default(false);
             $table->foreignId('creat_per')->constrained('usuaris')->onDelete('cascade');
             $table->timestamps();
         });
+
     }
 
     /**
