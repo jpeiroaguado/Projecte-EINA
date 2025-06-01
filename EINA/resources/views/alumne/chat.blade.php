@@ -13,9 +13,10 @@
                     Xat amb la IA
                 </h2>
                 @if ($conversa->context && $conversa->context->descripcio_curta)
-                    <p class="text-sm text-gray-600 dark:text-gray-300 italic">
+                    <p id="context-descripcio" class="text-sm text-gray-600 dark:text-gray-300 italic">
                         {{ $conversa->context->descripcio_curta }}
                     </p>
+
                 @endif
             </div>
             <div class="bg-gray-200 text-gray-800 px-3 py-1 rounded text-sm font-semibold">
@@ -47,6 +48,9 @@
         </form>
     </div>
 @endsection
+<script>
+    window.conversaId = {{ $conversa->id }};
+</script>
 
 @push('scripts')
     @vite('resources/js/chat.js')

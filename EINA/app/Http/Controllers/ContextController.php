@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ContextClasse;
+use Illuminate\Support\Facades\Log;
+
 
 class ContextController extends Controller
 {
@@ -93,16 +95,57 @@ class ContextController extends Controller
     }
 
     public function activate($id)
-    {
-        $usuariId = auth()->id();
+{
+    $usuariId = auth()->id();
 
-        ContextClasse::where('creat_per', $usuariId)->update(['actiu' => false]);
+    // Desactiva contextos anteriors
+    ContextClasse::where('creat_per', $usuariId)->update(['actiu' => false]);
 
-        $context = ContextClasse::where('creat_per', $usuariId)->findOrFail($id);
-        $context->update(['actiu' => true]);
+    // Activa el nou context
+    $context = ContextClasse::where('creat_per', $usuariId)->findOrFail($id);
+    $context->update(['actiu' => true]);
 
-        return redirect()->back()->with('success', 'Context activat.');
+    Log::info("[activate] Activant context ID: {$context->id} per usuari {$usuariId}");
+
+    // Agafem totes les converses
+    $converses = \App\Models\Conversa::all();
+
+    foreach ($converses as $conversaAntiga) {
+        if ($conversaAntiga->context_id != $context->id) {
+            // Crear nova conversa
+            $novaConversa = new \App\Models\Conversa();
+            $novaConversa->usuari_id = $conversaAntiga->usuari_id;
+            $novaConversa->context_id = $context->id;
+            $novaConversa->interaccions_restants = $context->interaccions_max ?? 10;
+            $novaConversa->save();
+
+            // Carrega la relació context abans de l’event
+            $novaConversa->load('context');
+
+            Log::info("[activate] Nova conversa creada per a usuari {$novaConversa->usuari_id} amb context {$context->id}");
+
+            try {
+                broadcast(new \App\Events\ContextCanviat($novaConversa));
+                Log::info("[activate] Event ContextCanviat emés per conversa ID: {$novaConversa->id}");
+            } catch (\Throwable $e) {
+                Log::error("[activate] ERROR al broadcast: " . $e->getMessage());
+                Log::error($e->getTraceAsString());
+            }
+
+        } else {
+            Log::info("[activate] Conversa ID {$conversaAntiga->id} ja tenia el context actiu. No s’ha fet res.");
+        }
     }
+
+    return redirect()->back()->with('success', 'Context activat i aplicat a totes les converses.');
+}
+
+
+
+
+
+
+
 
     public function destroy(string $id)
     {

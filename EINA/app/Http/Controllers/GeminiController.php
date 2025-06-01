@@ -60,14 +60,14 @@ class GeminiController extends Controller
         if (!$conversa->gemini_history_id && $resposta['history_id']) {
             $conversa->update(['gemini_history_id' => $resposta['history_id']]);
         }
-        //Guarde tant el missatge com la resposta de la
+        //Cree la instancia
         Missatge::create([
             'conversa_id' => $conversa->id,
             'remitent' => 'alumne',
             'cos' => $nouMissatge,
         ]);
 
-        // Guarde la resposta de la IA
+        // Guarde la resposta
         $missatgeNovaIA = Missatge::create([
             'conversa_id' => $conversa->id,
             'remitent' => 'ia',

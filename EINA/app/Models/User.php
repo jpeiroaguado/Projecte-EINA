@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\CustomResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -49,5 +50,9 @@ class User extends Authenticatable
     public function converses()
     {
         return $this->hasMany(Conversa::class, 'usuari_id');
+    }
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new CustomResetPassword($token));
     }
 }

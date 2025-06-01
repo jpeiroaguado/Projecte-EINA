@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('rol')->default('alumne');
+            $table->string('rol')->default('alumne')->index();
             $table->unsignedInteger('interaccions_restants')->nullable()->default(50);
             $table->timestamps();
         });

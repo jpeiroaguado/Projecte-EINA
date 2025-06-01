@@ -3,7 +3,7 @@
 namespace App\Events;
 
 use App\Models\Missatge;
-use Illuminate\Broadcasting\Channel;
+use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Queue\SerializesModels;
 
@@ -20,7 +20,7 @@ class NouMissatgeAlumne implements ShouldBroadcast
 
     public function broadcastOn()
     {
-        return new Channel('xat-alumne.' . $this->missatge->conversa_id);
+        return new PrivateChannel('xat-alumne.' . $this->missatge->conversa_id);
     }
 
     public function broadcastAs()

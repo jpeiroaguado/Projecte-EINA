@@ -112,6 +112,6 @@
 </div>
 <a href="{{ route('configuracio.index') }}"
    class="block w-fit mx-auto mt-6 px-6 py-3 text-lg font-semibold bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-100 rounded hover:bg-gray-300 dark:hover:bg-gray-700 transition">
-    ⬅️ Tornar al panell
+    Tornar al panell
 </a>
 @endsection

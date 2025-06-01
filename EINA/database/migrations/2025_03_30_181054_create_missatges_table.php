@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('missatges', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('conversa_id')->constrained('converses')->onDelete('cascade');
+            $table->foreignId('conversa_id')->constrained('converses')->onDelete('cascade')->index();
             $table->enum('remitent', ['alumne', 'ia']);
             $table->text('cos');
             $table->timestamps();

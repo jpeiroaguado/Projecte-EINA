@@ -7,6 +7,7 @@ use App\Http\Controllers\ContextController;
 use App\Http\Controllers\ConversaController;
 use App\Http\Controllers\ConfiguracioIAController;
 use App\Http\Controllers\GeminiController;
+use Illuminate\Support\Facades\Broadcast;
 
 /*Redirecció inicial segons rol*/
 Route::get('/', function () {
@@ -42,6 +43,9 @@ Route::middleware(['auth'])->group(function () {
     ->name('professor.carregarConversa');
     Route::get('/panell-professor/{id}/edit', [ConfiguracioIAController::class, 'edit'])->name('configuracio.edit');
     Route::put('/panell-professor/{id}', [ConfiguracioIAController::class, 'update'])->name('configuracio.update');
+    Route::post('/converses/{conversa}/actualitzar-context', [ConversaController::class, 'actualitzarContext'])
+        ->name('converses.actualitzarContext');
+    Route::get('/panell-professor/conversa-id/{id}', [ConversaController::class, 'mostrarConversaPerId']);
 });
 
 /*Gestió de contextos/*/
@@ -55,5 +59,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/alumne/chat', [ConversaController::class, 'xatAmbIA'])->name('alumne.chat');
     Route::post('/conversa/{id}/missatge', [GeminiController::class, 'enviar'])->name('conversa.enviar');
 });
+
+Broadcast::routes(['middleware' => ['auth:sanctum']]);
 
 require __DIR__.'/auth.php';

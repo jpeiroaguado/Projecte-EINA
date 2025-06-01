@@ -1,0 +1,22 @@
+{
+    "Profile": "Perfil",
+    "Profile Information": "Informació del perfil",
+    "Log Out": "Tanca la sessió",
+    "Save": "Desa",
+    "Email": "Correu electrònic",
+    "Password": "Contrasenya",
+    "Update Password": "Actualitzar la contrasenya",
+    "Current Password": "Contrasenya actual",
+    "New Password": "Nova contrasenya",
+    "Confirm Password": "Confirma la contrasenya",
+    "Remember me": "Recorda'm",
+    "Delete Account": "Elimina el compte",
+    "Forgot your password?": "Has oblidat la contrasenya?",
+    "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.":
+        "Has oblidat la contrasenya? Cap problema. Indica'ns la teua adreça de correu electrònic i t'enviarem un enllaç per a restablir la contrasenya.",
+    "Email Password Reset Link": "Restablir contrasenya",
+    "Log in": "Accedir",
+    "Update your account's profile information and email address.": "Actualitza la informació del teu perfil i l'adreça de correu electrònic.",
+    "Ensure your account is using a long, random password to stay secure.": "Assegura't que el teu compte utilitza una contrasenya llarga i aleatòria per mantenir la seguretat.",
+    "Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.": "Una vegada eliminat el teu compte, tots els recursos i dades s'esborraran de manera permanent. Abans de continuar, assegura't de descarregar qualsevol dada o informació que vulgues conservar."
+}
