@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="26.0.15">
+  <diagram name="Flux EINA" id="0">
+    <mxGraphModel dx="2008" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Usuari" value="Usuari inicia sessió" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="10" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Auth" value="AuthenticatedSessionController" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="230" y="40" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Redireccio" value="Redirecció segons rol" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="600" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Panell" value="Panell del professor" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="600" y="140" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Gemini" value="GeminiController@enviar" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="350" y="250" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Conversa" value="ConversaController@xatAmbIA" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="390" y="140" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Missatge" value="MissatgeController@store" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="490" y="370" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Broadcast" value="GEMINI" style="rounded=1;fillColor=#f5f5f5;strokeColor=#999999;" parent="1" vertex="1">
+          <mxGeometry x="240" y="370" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="Usuari" target="Auth" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="Auth" target="Redireccio" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="Redireccio" target="Panell" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Conversa" target="Gemini" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" style="edgeStyle=orthogonalEdgeStyle;exitX=0.317;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="Redireccio" target="Conversa" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" style="edgeStyle=orthogonalEdgeStyle;exitX=0.719;exitY=0.967;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="Gemini" target="Missatge" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u8jd4Sywx5WoZYpms56T-1" style="edgeStyle=orthogonalEdgeStyle;exitX=0.792;exitY=-0.017;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Broadcast" target="Gemini">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="310" as="sourcePoint" />
+            <mxPoint x="363" y="372" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u8jd4Sywx5WoZYpms56T-2" style="edgeStyle=orthogonalEdgeStyle;exitX=0.154;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.321;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Gemini" target="Broadcast">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="290" as="sourcePoint" />
+            <mxPoint x="313" y="352" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

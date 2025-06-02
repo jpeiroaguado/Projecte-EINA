@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="max-w-3xl mx-auto mt-10 px-4">
+    <div class="w-full max-w-6xl mx-auto mt-6 px-4 flex flex-col h-[calc(100vh-8rem)]">
         <div class="flex justify-between items-center mb-4">
             <div>
                 <h2 class="text-xl font-bold text-gray-800 dark:text-white">
@@ -16,7 +16,6 @@
                     <p id="context-descripcio" class="text-sm text-gray-600 dark:text-gray-300 italic">
                         {{ $conversa->context->descripcio_curta }}
                     </p>
-
                 @endif
             </div>
             <div class="bg-gray-200 text-gray-800 px-3 py-1 rounded text-sm font-semibold">
@@ -24,30 +23,35 @@
             </div>
         </div>
 
-        <div id="missatges" class="space-y-4 bg-white p-4 rounded shadow mb-6 overflow-y-auto min-h-[300px]">
-            @foreach ($conversa->missatges as $missatge)
-                <div class="{{ $missatge->remitent === 'alumne' ? 'text-right' : 'text-left' }}">
-                    <span
-                        class="{{ $missatge->remitent === 'alumne' ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800' }} px-4 py-2 rounded-2xl inline-block max-w-[90%]">
-                        {!! nl2br(\Illuminate\Support\Str::markdown($missatge->cos)) !!}
-                    </span>
-                </div>
-            @endforeach
-        </div>
+        <div class="flex flex-col flex-grow overflow-hidden">
+            <div id="missatges"
+                 class="overflow-y-auto flex-grow bg-white p-4 rounded shadow mb-4 space-y-4">
+                @foreach ($conversa->missatges as $missatge)
+                    <div class="{{ $missatge->remitent === 'alumne' ? 'text-right' : 'text-left' }}">
+                        <span
+                            class="{{ $missatge->remitent === 'alumne' ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800' }} px-4 py-2 rounded-2xl inline-block max-w-[90%]">
+                            {!! $missatge->formatat() !!}
+                        </span>
+                    </div>
+                @endforeach
+            </div>
 
-        <form id="formulari-xat"
-              class="flex gap-4"
-              data-conversa-id="{{ $conversaId }}"
-              data-context-id="{{ $conversa->context->id }}">
-            @csrf
-            <input type="text" id="input-missatge" class="flex-grow border rounded px-4 py-2 text-black"
-                placeholder="Escriu el teu missatge..." required>
-            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-                Enviar
-            </button>
-        </form>
+            <form id="formulari-xat"
+                  class="flex gap-4"
+                  data-conversa-id="{{ $conversaId }}"
+                  data-context-id="{{ $conversa->context->id }}">
+                @csrf
+                <textarea id="input-missatge" rows="1" class="flex-grow border rounded px-4 py-2 text-black resize-none" placeholder="Escriu el teu missatge..." required></textarea>
+
+                <button type="submit"
+                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                    Enviar
+                </button>
+            </form>
+        </div>
     </div>
 @endsection
+
 <script>
     window.conversaId = {{ $conversa->id }};
 </script>

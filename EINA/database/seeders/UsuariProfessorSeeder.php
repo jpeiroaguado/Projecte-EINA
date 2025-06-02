@@ -11,12 +11,12 @@ class UsuariProfessorSeeder extends Seeder
     public function run(): void
     {
         User::updateOrCreate(
-            ['email' => 'javierpeiroaguado@gmail.com'],
+            ['email' => 'javierpeiroaguado@eina.es'],
             [
                 'name' => 'Javier Peiró',
-                'password' => Hash::make('Natalya-26'),
+                'password' => Hash::make('professor'),
                 'rol' => 'professor',
-                'interaccions_restants' => 999,
+                'interaccions_restants' => 9999,
             ]
         );
     }

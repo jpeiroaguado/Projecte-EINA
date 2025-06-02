@@ -20,25 +20,63 @@ document.addEventListener("DOMContentLoaded", function () {
     const conversaId = formulari.dataset.conversaId;
     console.log("[chat.js] conversaId:", conversaId);
 
-    // Funció per a parsejar format
-    function parseGeminiFormat(text) {
+    // Funció per a escapar LHTML i parsejar format
+    function escaparHTML(text) {
         return text
-            .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-            .replace(/\n/g, "<br>");
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
     }
+    function parseGeminiFormat(text) {
+    // Extraiem i substituïm els blocs ```...``` per marcadors temporals
+    const codeBlocks = [];
+    text = text.replace(/```(\w*)\n([\s\S]*?)```/g, function (_, lang, code) {
+        const placeholder = `__CODE_BLOCK_${codeBlocks.length}__`;
+        codeBlocks.push({
+            placeholder,
+            html: `<pre class="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm"><code class="language-${lang}">${escaparHTML(code)}</code></pre>`
+        });
+        return placeholder;
+    });
+
+    // Escapem la resta del contingut (fora dels blocs de codi)
+    text = escaparHTML(text);
+
+    // Negretes **text**
+    text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
+    // Salts de línia
+    text = text.replace(/\n/g, "<br>");
+
+    // Tornem a inserir els blocs de codi
+    codeBlocks.forEach(cb => {
+        text = text.replace(cb.placeholder, cb.html);
+    });
+
+    return text;
+}
+
 
     // Auto-scroll en càrrega
     contenedor.scrollTop = contenedor.scrollHeight;
+
+    //Permet el shift+intro per a saltar linea
+    input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            formulari.dispatchEvent(new Event("submit", { cancelable: true }));
+        }
+    });
 
     // Enviament de missatge
     formulari.addEventListener("submit", function (e) {
         e.preventDefault();
         const missatge = input.value.trim();
         if (!missatge) return;
-
+        const missatgeFormatejat = parseGeminiFormat(missatge);
         contenedor.innerHTML += `
             <div class="text-right">
-                <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-2xl inline-block max-w-[90%]">${missatge}</span>
+                <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-2xl inline-block max-w-[90%]">${missatgeFormatejat}</span>
             </div>
         `;
         input.value = "";
@@ -80,29 +118,42 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("[chat.js] Subscripció a conversaId =", window.conversaId);
 
     window.Echo.private(`conversa.${window.conversaId}`)
-    .subscribed(() => {
-        console.log("[chat.js] Subscripció a conversa." + window.conversaId + " OK");
-    })
-    .listen('ContextCanviat', (e) => {
-    console.log("[chat.js] Rebut ContextCanviat!", e);
-    console.log("[chat.js] e.conversa_id =", e.conversa_id, "window.conversaId =", window.conversaId);
+        .subscribed(() => {
+            console.log(
+                "[chat.js] Subscripció a conversa." + window.conversaId + " OK"
+            );
+        })
+        .listen("ContextCanviat", (e) => {
+            console.log("[chat.js] Rebut ContextCanviat!", e);
+            console.log(
+                "[chat.js] e.conversa_id =",
+                e.conversa_id,
+                "window.conversaId =",
+                window.conversaId
+            );
 
-    // Si la conversa ha canviat, recarreguem totalment la vista
-    if (e.conversa_id && String(e.conversa_id) !== String(window.conversaId)) {
-        console.log("[chat.js] ID de conversa canviat. Recarregant...");
-        location.reload();
-        return;
-    }
+            // Si la conversa ha canviat, recarreguem totalment la vista
+            if (
+                e.conversa_id &&
+                String(e.conversa_id) !== String(window.conversaId)
+            ) {
+                console.log("[chat.js] ID de conversa canviat. Recarregant...");
+                location.reload();
+                return;
+            }
 
-    // Si és la mateixa conversa, potser només han canviat les interaccions
-    if (e.interaccions_restants !== undefined) {
-        const contador = document.getElementById("interaccions-restants");
-        if (contador) {
-            contador.textContent = e.interaccions_restants;
-            console.log("[chat.js] Interaccions actualitzades:", e.interaccions_restants);
-        }
-    }
-});
-
-
+            // Si és la mateixa conversa, potser només han canviat les interaccions
+            if (e.interaccions_restants !== undefined) {
+                const contador = document.getElementById(
+                    "interaccions-restants"
+                );
+                if (contador) {
+                    contador.textContent = e.interaccions_restants;
+                    console.log(
+                        "[chat.js] Interaccions actualitzades:",
+                        e.interaccions_restants
+                    );
+                }
+            }
+        });
 });

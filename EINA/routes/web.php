@@ -39,8 +39,8 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth'])->group(function () {
     //Route::get('/panell-professor', [ConfiguracioIAController::class, 'index'])->name('configuracio.index');
     Route::get('/panell-professor', [ConversaController::class, 'panell'])->name('configuracio.index');
-    Route::get('/panell-professor/conversa/{id}', [ConversaController::class, 'carregarPerProfessor'])
-    ->name('professor.carregarConversa');
+    //Route::get('/panell-professor/conversa/{id}', [ConversaController::class, 'carregarPerProfessor'])->name('professor.carregarConversa');
+    Route::get('/panell-professor/conversa/{id}', [ConversaController::class, 'mostrarConversaPerUsuari']);
     Route::get('/panell-professor/{id}/edit', [ConfiguracioIAController::class, 'edit'])->name('configuracio.edit');
     Route::put('/panell-professor/{id}', [ConfiguracioIAController::class, 'update'])->name('configuracio.update');
     Route::post('/converses/{conversa}/actualitzar-context', [ConversaController::class, 'actualitzarContext'])

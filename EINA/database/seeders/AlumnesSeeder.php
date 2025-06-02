@@ -11,16 +11,16 @@ class AlumnesSeeder extends Seeder
     public function run(): void
     {
         $alumnes = [
-            ['name' => 'Pedro', 'email' => 'pedro@eina.es'],
-            ['name' => 'Giselle', 'email' => 'giselle@eina.es'],
-            ['name' => 'Jorge', 'email'=> 'jorge@eina.es'],
+            ['name' => 'Eloy', 'email' => 'eloy@eina.es'],
+            ['name' => 'Kike', 'email' => 'kike@eina.es'],
+            ['name' => 'Carles', 'email'=> 'carles@eina.es'],
         ];
 
         foreach ($alumnes as $alumne) {
             User::create([
                 'name' => $alumne['name'],
                 'email' => $alumne['email'],
-                'password' => Hash::make('1234'),
+                'password' => Hash::make('alumne'),
                 'rol' => 'alumne',
             ]);
         }

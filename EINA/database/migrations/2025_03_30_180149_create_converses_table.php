@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('converses', function (Blueprint $table) {
     $table->id();
-    $table->foreignId('usuari_id')->constrained('usuaris')->index();
-    $table->foreignId('context_id')->constrained('contexts')->onDelete('cascade')->index();
+    $table->foreignId('usuari_id')->constrained('usuaris');
+    $table->foreignId('context_id')->constrained('contexts')->onDelete('cascade');
     $table->string('gemini_history_id')->nullable();
     $table->unsignedInteger('interaccions_restants')->default(0);
     $table->timestamps();
