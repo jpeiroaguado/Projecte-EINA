@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<indexing>
+ <paragraph index="9" node_type="writer">Projecte EINA	D.A.W. Curs 2024-2025</paragraph>
+ <paragraph index="12" node_type="writer">Pàgina  de </paragraph>
+ <paragraph index="15" node_type="writer">Projecte EINA	D.A.W. Curs 2024-2025</paragraph>
+ <paragraph index="18" node_type="writer">Pàgina  de </paragraph>
+ <object alt="" name="Imagen19" object_type="graphic"/>
+ <object alt="" name="Imagen1" object_type="graphic"/>
+ <object alt="" name="Imagen2" object_type="graphic"/>
+ <object alt="" name="Imagen3" object_type="graphic"/>
+ <object alt="" name="Imagen4" object_type="graphic"/>
+ <object alt="" name="Imagen5" object_type="graphic"/>
+ <object alt="" name="Imagen6" object_type="graphic"/>
+ <object alt="" name="Imagen7" object_type="graphic"/>
+ <object alt="" name="Imagen8" object_type="graphic"/>
+ <object alt="" name="Imagen9" object_type="graphic"/>
+ <object alt="" name="Imagen10" object_type="graphic"/>
+ <object alt="" name="Imagen11" object_type="graphic"/>
+ <object alt="" name="Imagen20" object_type="graphic"/>
+ <object alt="" name="Imagen21" object_type="graphic"/>
+ <object alt="" name="Imagen12" object_type="graphic"/>
+ <object alt="" name="Imagen13" object_type="graphic"/>
+ <object alt="" name="Imagen15" object_type="graphic"/>
+ <object alt="" name="Imagen14" object_type="graphic"/>
+ <object alt="" name="Imagen16" object_type="graphic"/>
+ <object alt="" name="Imagen18" object_type="graphic"/>
+ <object alt="" name="Imagen17" object_type="graphic"/>
+ <object alt="" name="Imagen22" object_type="graphic"/>
+ <object alt="" name="Imagen23" object_type="graphic"/>
+ <paragraph index="95" node_type="writer">INDEX</paragraph>
+ <paragraph index="96" node_type="writer">Introducció		6	</paragraph>
+ <paragraph index="97" node_type="writer">Informació general	7</paragraph>
+ <paragraph index="98" node_type="writer"> Objectius del projecte	7</paragraph>
+ <paragraph index="99" node_type="writer">Contextualització del projecte	8</paragraph>
+ <paragraph index="100" node_type="writer"> Viabilitat i objectius concrets	8</paragraph>
+ <paragraph index="101" node_type="writer"> Tecnologies avaluades	9</paragraph>
+ <paragraph index="102" node_type="writer"> Tecnologies alternatives	11</paragraph>
+ <paragraph index="103" node_type="writer">Planificació del projecte	12</paragraph>
+ <paragraph index="104" node_type="writer">Temporalització	12</paragraph>
+ <paragraph index="105" node_type="writer">Cronograma	14</paragraph>
+ <paragraph index="106" node_type="writer">Desenvolupament del projecte	15</paragraph>
+ <paragraph index="107" node_type="writer">Fase prèvia	15</paragraph>
+ <paragraph index="108" node_type="writer"> Estudi d'alternatives	15</paragraph>
+ <paragraph index="109" node_type="writer"> Instal·lació i configuració d'eines	15</paragraph>
+ <paragraph index="110" node_type="writer"> Creació del repositori GitHub	16</paragraph>
+ <paragraph index="111" node_type="writer"> Especificació i disseny previ	16</paragraph>
+ <paragraph index="112" node_type="writer"> Requisits i funcionalitats principals	16</paragraph>
+ <paragraph index="113" node_type="writer"> Model E/R i diagrames UML	17</paragraph>
+ <paragraph index="114" node_type="writer"> Prototip inicial amb Figma	18</paragraph>
+ <paragraph index="115" node_type="writer"> Disseny de rutes i controladors a Laravel	19</paragraph>
+ <paragraph index="116" node_type="writer"> Desenvolupament Backend	23</paragraph>
+ <paragraph index="117" node_type="writer"> Creació de models, migracions i relacions	23</paragraph>
+ <paragraph index="118" node_type="writer"> Autenticació amb Laravel Sanctum	23</paragraph>
+ <paragraph index="119" node_type="writer"> Controladors i serveis per gestió d'usuaris	24</paragraph>
+ <paragraph index="120" node_type="writer"> Integració de Gemini 2.5	24</paragraph>
+ <paragraph index="121" node_type="writer">Configuració API	25</paragraph>
+ <paragraph index="122" node_type="writer"> Comunicació amb la IA	25</paragraph>
+ <paragraph index="123" node_type="writer"> Emmagatzematge i processament de converses	25</paragraph>
+ <paragraph index="124" node_type="writer"> Implementació del Xat i WebSockets 	27</paragraph>
+ <paragraph index="125" node_type="writer"> Desenvolupament inicial de les vistes 	27</paragraph>
+ <paragraph index="126" node_type="writer"> Configuració inicial amb Blade i Tailwind 	27</paragraph>
+ <paragraph index="127" node_type="writer"> Estils bàsics amb CSS	27</paragraph>
+ <paragraph index="128" node_type="writer">  Implementació del xat amb Livewire/AJAX	27</paragraph>
+ <paragraph index="129" node_type="writer">  Connexió frontend-backend	27</paragraph>
+ <paragraph index="130" node_type="writer">  Ampliació i refinament de les vistes	28</paragraph>
+ <paragraph index="131" node_type="writer"> Vistes específiques d'alumnes	28</paragraph>
+ <paragraph index="132" node_type="writer"> Vistes específiques del professor	28</paragraph>
+ <paragraph index="133" node_type="writer"> Implementació Broadcasting amb Laravel Echo i Pusher	28</paragraph>
+ <paragraph index="134" node_type="writer"> Control i gestió del professor 	28</paragraph>
+ <paragraph index="135" node_type="writer"> Panell professor (supervisió, bloqueig IA)	29</paragraph>
+ <paragraph index="136" node_type="writer"> Historial de converses per alumne	29</paragraph>
+ <paragraph index="137" node_type="writer"> Seguretat, Optimització i Pujada	30</paragraph>
+ <paragraph index="138" node_type="writer"> Revisió seguretat API i autenticació	30</paragraph>
+ <paragraph index="139" node_type="writer"> Optimització rendiment	30</paragraph>
+ <paragraph index="140" node_type="writer">Correcció errors	30</paragraph>
+ <paragraph index="141" node_type="writer"> Ajustos finals	31</paragraph>
+ <paragraph index="142" node_type="writer">  Pujada GitHub	31</paragraph>
+ <paragraph index="143" node_type="writer"> Documentació tècnica.	32</paragraph>
+ <paragraph index="145" node_type="writer">Interfície final de l’aplicació	32</paragraph>
+ <paragraph index="146" node_type="writer"> Vista de l’alumne.	33</paragraph>
+ <paragraph index="147" node_type="writer"> Vista del professor	34</paragraph>
+ <paragraph index="148" node_type="writer">Bibliografia 		35</paragraph>
+ <paragraph index="149" node_type="writer">Llibres i vídeos	35</paragraph>
+ <paragraph index="150" node_type="writer">Manuals web	35</paragraph>
+ <paragraph index="151" node_type="writer">Foros i blogs	35</paragraph>
+ <paragraph index="152" node_type="writer">Anàlisi i valoració d'alternatives	37</paragraph>
+ <paragraph index="153" node_type="writer"> Anàlisi i conclusions	37</paragraph>
+ <paragraph index="154" node_type="writer">Objectius	37</paragraph>
+ <paragraph index="155" node_type="writer"> Conclusions	37</paragraph>
+ <paragraph index="156" node_type="writer"> Autoavaluació	36</paragraph>
+ <paragraph index="157" node_type="writer"> Millores o alternatives proposades	36</paragraph>
+ <paragraph index="158" node_type="writer">Agraïments	37</paragraph>
+ <paragraph index="159" node_type="writer"> Dificultats trobades	37</paragraph>
+ <paragraph index="160" node_type="writer"> Relació amb els mòduls estudiats	38</paragraph>
+ <paragraph index="161" node_type="writer">Annexos		39</paragraph>
+ <paragraph index="162" node_type="writer"> Estructura de carpetes	39</paragraph>
+ <paragraph index="163" node_type="writer">Diagrames	42</paragraph>
+ <paragraph index="164" node_type="writer"> Diagrama E/R	44</paragraph>
+ <paragraph index="165" node_type="writer"> Diagrama de classes	45</paragraph>
+ <paragraph index="166" node_type="writer"> Diagrama de flux d’aplicació	45</paragraph>
+ <paragraph index="168" node_type="writer">1. INTRODUCCIÓ</paragraph>
+ <paragraph index="169" node_type="writer">
+En un principi, la idea original era desenvolupar un projecte relacionat amb mapes interactius i jocs de guerra, una temàtica que sempre m’ha interessat per la seua complexitat tècnica i les seues possibilitats d’interacció visual. No obstant això, durant la fase inicial del curs, el professor Javier Garcia Sabater va proposar una idea que em va semblar no sols innovadora, sinó també molt útil i amb un gran potencial pràctic: crear una eina basada en intel·ligència artificial per a l’entorn educatiu.</paragraph>
+ <paragraph index="170" node_type="writer">Aquesta proposta partia d’una realitat que coneixíem de primera mà: molts professors es troben desbordats davant la quantitat de continguts i canvis constants que es produeixen en l’àmbit educatiu. En algunes classes, per molt bona voluntat que hi haja, és impossible atendre adequadament tots els alumnes. Per això, vaig veure clar que aquest projecte podia ser una gran oportunitat per aportar una solució real a un problema actual.</paragraph>
+ <paragraph index="171" node_type="writer">L’objectiu no era només desenvolupar una eina que ajudara els estudiants, sinó també proporcionar al professorat un instrument de suport i control, capaç de supervisar l’ús de la IA per part dels alumnes i afavorir-ne una adopció responsable. Amb aquesta eina, el professor pot controlar el context de la conversa, limitar el nombre d’interaccions i revisar les converses dels alumnes així com llimitar l’us durant activitats específiques.</paragraph>
+ <paragraph index="172" node_type="writer">A més, aquest projecte també busca reduir la por o desconfiança que moltes persones encara tenen envers la intel·ligència artificial. Ben utilitzada, pot ser una ferramenta poderosa per complementar l’ensenyament tradicional, i aquest és precisament un dels pilars fonamentals del projecte EINA.</paragraph>
+ <paragraph index="175" node_type="writer">INFORMACIÓ GENERAL</paragraph>
+ <paragraph index="176" node_type="writer">Nom de l'alumne: Javier Peiró Aguado</paragraph>
+ <paragraph index="177" node_type="writer">Cicle: Desenvolupament d'Aplicacions Web</paragraph>
+ <paragraph index="178" node_type="writer">Curs escolar: 2024 – 2025</paragraph>
+ <paragraph index="179" node_type="writer">Denominació del projecte: EINA - Eina Intel·ligent per a l’Aula</paragraph>
+ <paragraph index="180" node_type="writer">Projecte vinculat a FCT: No vinculat</paragraph>
+ <paragraph index="181" node_type="writer">Tutor individual: Eloy Gutiérrez Paredes</paragraph>
+ <paragraph index="182" node_type="writer">Tutor col·lectiu: Enrique Savall Seguí</paragraph>
+ <paragraph index="183" node_type="writer">OBJECTIUS DEL PROJECTE</paragraph>
+ <paragraph index="184" node_type="writer">Objectius generals</paragraph>
+ <paragraph index="185" node_type="writer">Desenvolupar una aplicació web funcional amb Laravel que permeta la interacció entre alumnes i una IA generativa amb la supervisió del professor.</paragraph>
+ <paragraph index="186" node_type="writer">Facilitar al professorat una eina de seguiment i control de les converses entre alumnat i la intel·ligència artificial.</paragraph>
+ <paragraph index="187" node_type="writer">Fomentar l’ús responsable i supervisat de la IA en l’entorn educatiu.</paragraph>
+ <paragraph index="188" node_type="writer">Reduir la resistència i la preocupació a la IA mitjançant una implementació pràctica, clara i controlada.</paragraph>
+ <paragraph index="189" node_type="writer">Objectius específics</paragraph>
+ <paragraph index="190" node_type="writer">Permetre al professor assignar un context a la IA per a cada classe o tema.</paragraph>
+ <paragraph index="191" node_type="writer">Limitar el nombre d’interaccions dels alumnes segons les condicions establides pel docent.</paragraph>
+ <paragraph index="192" node_type="writer">Crear un sistema d’autenticació i rols amb Laravel Breeze i Sanctum per diferenciar professorat i alumnat.</paragraph>
+ <paragraph index="193" node_type="writer">Registrar totes les converses mantingudes amb la IA per a la seua posterior consulta.</paragraph>
+ <paragraph index="194" node_type="writer">Implementar funcionalitats en temps real com la visualització de missatges i canvis de context mitjançant Laravel Echo i Pusher.</paragraph>
+ <paragraph index="195" node_type="writer">Dissenyar una interfície clara, responsive i usable mitjançant Blade, Tailwind CSS i JavaScript.</paragraph>
+ <paragraph index="196" node_type="writer">Permetre al professor consultar l’historial de converses de cada alumne i controlar quan pot fer ús de la IA.</paragraph>
+ <paragraph index="197" node_type="writer">2. CONTEXTUALITZACIÓ DEL PROJECTE</paragraph>
+ <paragraph index="198" node_type="writer">VIABILITAT I OBJECTIUS CONCRETS</paragraph>
+ <paragraph index="199" node_type="writer">El projecte EINA naix amb la intenció de resoldre una necessitat real detectada en l’àmbit educatiu: la manca d’eines efectives per a controlar i aprofitar les interaccions amb intel·ligència artificial a l’aula. Amb l’arribada massiva de models d’IA com ChatGPT, Gemini o Copilot, molts centres educatius es troben desbordats per l’ús descontrolat que en poden fer els alumnes, especialment en contextos on el professorat no pot estar pendent de cadascun d’ells en temps real.</paragraph>
+ <paragraph index="200" node_type="writer">La viabilitat del projecte es fonamenta en l’ús de tecnologies madures, estables i ben documentades com Laravel, Tailwind, JavaScript i Pusher. A més, el fet que el desenvolupament es base en el framework Laravel facilita una implementació modular i escalable, adequada per a ser adaptada a les necessitats de cada centre.</paragraph>
+ <paragraph index="202" node_type="writer">EINA permet al professorat:</paragraph>
+ <paragraph index="203" node_type="writer">Assignar un context concret a la IA perquè responga d’acord amb una situació educativa definida (per exemple, actuar com a professor de CSS o com a guia de resolució de problemes).</paragraph>
+ <paragraph index="204" node_type="writer">Controlar la quantitat d’interaccions disponibles per a cada alumne.</paragraph>
+ <paragraph index="205" node_type="writer">Bloquejar o activar l’accés a la IA segons la dinàmica de la classe.</paragraph>
+ <paragraph index="206" node_type="writer">Visualitzar les converses dels alumnes seleccionats.</paragraph>
+ <paragraph index="207" node_type="writer">Els alumnes, per la seua banda, poden:</paragraph>
+ <paragraph index="208" node_type="writer">Conversar amb la IA dins d’un context docent controlat.</paragraph>
+ <paragraph index="209" node_type="writer">Aquest plantejament equilibra la llibertat de l’alumne amb el control necessari per part del docent, convertint-se així en una eina pedagògica poderosa, segura i adaptable. Tot això fa que el projecte siga completament viable en entorns educatius reals, tant a nivell tècnic com metodològic.</paragraph>
+ <paragraph index="210" node_type="writer">TECNOLOGIES AVALUADES</paragraph>
+ <paragraph index="211" node_type="writer">Per al desenvolupament d’EINA, s’ha fet ús de tecnologies estables, modernes i àmpliament utilitzades en el desenvolupament web. La tria d’aquestes tecnologies ha estat condicionada tant per l’experiència prèvia com per la seua documentació, comunitat activa i compatibilitat entre components.</paragraph>
+ <paragraph index="212" node_type="writer">Laravel (PHP)
+Framework backend utilitzat per la seua robustesa, facilitat d’organització de codi, gestió de rutes, autenticació integrada i gran ecosistema. Ha sigut la base per a tota la lògica de negoci del projecte.</paragraph>
+ <paragraph index="213" node_type="writer">Laravel Breeze + Sanctum
+Utilitzat per a la gestió d’autenticació, rols i sessions segures, amb suport per a SPA i API tokens. Breeze facilita l’estructura d’autenticació amb Blade i Tailwind.</paragraph>
+ <paragraph index="214" node_type="writer">MySQL
+Base de dades relacional triada per la seua estabilitat i integració nativa amb Laravel mitjançant Eloquent ORM.</paragraph>
+ <paragraph index="215" node_type="writer">Tailwind CSS (amb plugins)
+Framework de disseny utilitzat per a donar estil a la interfície de forma modular i responsive. Ha permés aplicar disseny mobile-first i adaptar ràpidament els components visuals. A més del nucli bàsic, s’han instal·lat els plugins @tailwindcss/forms per millorar l’estil dels formularis i @tailwindcss/line-clamp per limitar visualment la quantitat de línies de text mostrades en vistes com les descripcions de context.</paragraph>
+ <paragraph index="216" node_type="writer">Blade (motor de plantilles)
+Permet integrar codi PHP amb HTML de manera senzilla i mantenible. S’ha utilitzat per a totes les vistes del projecte.</paragraph>
+ <paragraph index="217" node_type="writer">JavaScript (i Alpine.js)
+Usat per a interaccions dinàmiques a les vistes. Especialment útil per a gestionar el xat en temps real, mostrar o amagar components i actualitzar l’estat de l’interfície.</paragraph>
+ <paragraph index="218" node_type="writer">Laravel Echo + Pusher
+Tecnologia per a la comunicació en temps real via broadcasting. Permet que el professor veja missatges nous i canvis de context sense necessitat de recarregar la pàgina.</paragraph>
+ <paragraph index="219" node_type="writer">Laravel Telescope
+S’ha utilitzat per monitoritzar les peticions HTTP, emissions d’esdeveniments broadcast i execució de serveis durant la fase de desenvolupament i proves. Ha resultat essencial per a la depuració de funcionalitats en temps real i comprovació del correcte funcionament de les cues, emissions i respostes de l’API.</paragraph>
+ <paragraph index="220" node_type="writer">Gemini 2.5 Flash (Google AI)
+Model d’intel·ligència artificial triat per la seua capacitat de mantenir contextos persistents i pel seu pla gratuït amb accés via API. S’ha integrat mitjançant peticions HTTP personalitzades amb una clau API pròpia, i s’està estudiant la transició a un sistema d’autenticació OAuth per a futures versions.</paragraph>
+ <paragraph index="221" node_type="writer">Vite
+Utilitzat com a bundler per a compilar i optimitzar els fitxers CSS i JS del projecte, en lloc de Webpack. S’integra nativament amb Laravel des de les últimes versions.</paragraph>
+ <paragraph index="222" node_type="writer">Composer i npm
+Gestors de dependències PHP i JavaScript, essencials per a instal·lar paquets com Breeze, Tailwind o Echo.</paragraph>
+ <paragraph index="223" node_type="writer">TECNOLOGIES ALTERNATIVES</paragraph>
+ <paragraph index="224" node_type="writer">Durant el desenvolupament del projecte també es valoraren altres tecnologies que finalment foren descartades per motius de compatibilitat, mantenibilitat o viabilitat tècnica.</paragraph>
+ <paragraph index="225" node_type="writer">beyondcode/laravel-websockets Inicialment es va intentar implementar comunicació en temps real mitjançant aquest paquet, però es va descartar per incompatibilitat amb Laravel 12. Aquest fet va motivar la migració definitiva cap a Pusher com a servei extern per al broadcasting.</paragraph>
+ <paragraph index="226" node_type="writer">Laravel Jetstream Es va estudiar l’ús de Jetstream com a alternativa a Breeze per la seua integració amb Livewire i funcionalitats avançades. No obstant això, es va considerar massa pesat per a l’abast i simplicitat del projecte actual.</paragraph>
+ <paragraph index="227" node_type="writer">Firebase Realtime Database Tot i que ofereix funcionalitats en temps real integrades, es va descartar per dependències externes no necessàries i per incompatibilitat amb la lògica basada en Laravel i MySQL.</paragraph>
+ <paragraph index="228" node_type="writer">Chat GPT Va ser avaluat com a opció principal, però degut a la poca capacitat del model de la API per fer consultes gratuïtes, i a que els models amb capacitat de mantindre context requerien fins a 10 vegades més s’ha obtat per Gemini 2.5 Flash.</paragraph>
+ <paragraph index="229" node_type="writer">Gemini Flash 2.5 necessita un compte, però els seus preus eren significativament més assequibles al moment de començar amb la API. Gemini a part permetia 15 sol·licituds per minut, front a les 3 de Chat GPT. Amés Chat GPT requeria de tindre un compte de empresa amb un llimit de tokens gastats, mentre que Gemini no. Per totes estes raons es va optar per Gemini 2.5 Flash.</paragraph>
+ <paragraph index="230" node_type="writer">PLANIFICACIÓ DEL PROJECTE</paragraph>
+ <paragraph index="231" node_type="writer">TEMPORALITZACIÓ</paragraph>
+ <paragraph index="232" node_type="writer">Setmana 1 (21 - 27 de març) → Fase 0: Fase Prèvia</paragraph>
+ <paragraph index="233" node_type="writer">Estudi d'alternatives, informació documental amb Gemini 2.0.</paragraph>
+ <paragraph index="234" node_type="writer">Instal·lació i configuració d'eines (Laravel, MySQL, etc.).</paragraph>
+ <paragraph index="235" node_type="writer">Creació del repositori en GitHub i planificació del projecte.</paragraph>
+ <paragraph index="236" node_type="writer">Setmana 2 i 3 (28 de març - 10 d'abril) → Fase 1: Especificació i Disseny Previ</paragraph>
+ <paragraph index="237" node_type="writer">Definició de requisits finals, abast i funcionalitats principals.</paragraph>
+ <paragraph index="238" node_type="writer">Model entitat-relació (E/R) i diagrames UML.</paragraph>
+ <paragraph index="239" node_type="writer">Prototip inicial de la interfície amb Figma.</paragraph>
+ <paragraph index="240" node_type="writer">Disseny de les rutes i els controladors a Laravel.</paragraph>
+ <paragraph index="241" node_type="writer">Setmana 4 i 5 (11 - 25 d'abril) → Fase 2: Desenvolupament del Backend (Autenticació i Base de Dades)</paragraph>
+ <paragraph index="242" node_type="writer">Creació de models, migracions i relacions en MySQL</paragraph>
+ <paragraph index="243" node_type="writer">Implementació del sistema d'autenticació amb Laravel Sanctum</paragraph>
+ <paragraph index="244" node_type="writer">Desenvolupament de controladors i serveis per a la gestió d'usuaris</paragraph>
+ <paragraph index="245" node_type="writer">Setmana 6 (26 d'abril - 2 de maig) → Fase 3: Integració de Gemini 2.0</paragraph>
+ <paragraph index="246" node_type="writer">Configuració de l'API i gestió de tokens.</paragraph>
+ <paragraph index="247" node_type="writer">Creació de la comunicació amb la IA.</paragraph>
+ <paragraph index="248" node_type="writer">Emmagatzematge i processament de converses.</paragraph>
+ <paragraph index="249" node_type="writer">Setmana 7 (3 - 9 de maig) → Fase 4: Implementació del Xat i WebSockets</paragraph>
+ <paragraph index="250" node_type="writer">Desenvolupament de les vistes amb Blade, Tailwind i CSS.</paragraph>
+ <paragraph index="251" node_type="writer">Implementació de xat en temps real.</paragraph>
+ <paragraph index="252" node_type="writer">Connexió entre frontend i backend amb AJAX, pusher i echo.</paragraph>
+ <paragraph index="253" node_type="writer">Setmana 8 (10 - 15 de maig) → Fase 5: Control i Gestió del Professor</paragraph>
+ <paragraph index="254" node_type="writer">Panell de professor amb funcions de supervisió.</paragraph>
+ <paragraph index="255" node_type="writer">Funció de bloqueig/desbloqueig de la IA en temps real.</paragraph>
+ <paragraph index="256" node_type="writer">Historial de converses per alumne (Falta vore el context holder de Gemini).</paragraph>
+ <paragraph index="257" node_type="writer">Setmana 9 (16 - 20 de maig) → Fase 6: Seguretat, Optimització i Pujada.</paragraph>
+ <paragraph index="258" node_type="writer">Revisió de seguretat en l'API i autenticació.</paragraph>
+ <paragraph index="259" node_type="writer">Optimització de rendiment i gestió de consultes.</paragraph>
+ <paragraph index="260" node_type="writer">Correcció d'errors.</paragraph>
+ <paragraph index="261" node_type="writer">Pujada a Github.</paragraph>
+ <paragraph index="262" node_type="writer">Setmana 10, 11 i 12 (21 de maig - 1 de juny) → Fase 7: Documentació Tècnica, preparació de la presentació i lliurament.</paragraph>
+ <paragraph index="263" node_type="writer">Redacció de la documentació tècnica i manual d'usuari.</paragraph>
+ <paragraph index="264" node_type="writer">Elaboració del Document a entregar i de la presentació.</paragraph>
+ <paragraph index="265" node_type="writer">Lliurament.</paragraph>
+ <paragraph index="267" node_type="writer">CRONOGRAMA</paragraph>
+ <paragraph index="268" node_type="writer">DESENVOLUPAMENT DEL PROJECTE</paragraph>
+ <paragraph index="269" node_type="writer">En aquest apartat es descriu com s’ha anat creant EINA, pas a pas. Des de la fase prèvia fins a l’entrega, el desenvolupament ha anat evolucionant de forma iterativa, tornant enrere quan feia falta, provant funcionalitats i millorant-les quan es podia.</paragraph>
+ <paragraph index="270" node_type="writer">Cada fase descriu què s’ha fet, amb quines eines i per què s’han pres algunes decisions. També inclou captures, exemples de codi i explicacions visuals per entendre millor el procés.</paragraph>
+ <paragraph index="271" node_type="writer">4.0 FASE PRÈVIA</paragraph>
+ <paragraph index="272" node_type="writer">Durant aquesta fase inicial s’ha posat en marxa tota l'estructura bàsica del projecte i s’ha decidit quina tecnologia s’anava a fer servir. També s’han començat a establir les primeres idees generals del projecte, així com l’organització del codi i el control de versions.</paragraph>
+ <paragraph index="273" node_type="writer">4.0.1 Estudi d’alternatives</paragraph>
+ <paragraph index="274" node_type="writer">Inicialment, s’han valorat diversos tipus de projectes com ja s’ha exposat a la introducció. Però com ja s’ha expost, Javier García va proposar la idea d’EINA. Hi han al mercat ferramentes paregudes com Duolingo Max o Botpress, però ninguna enfocada al entorn educatiu de classe a la educació pública.</paragraph>
+ <paragraph index="275" node_type="writer">L’objectiu ha sigut crear una aplicació que ajudara tant als alumnes com als professors a utilitzar la IA de forma educativa i controlada. Això també podia ajudar a perdre la por a emprar aquestes eines i, a més, oferir al professorat un mitjà per controlar com s’utilitza i amb quina finalitat.</paragraph>
+ <paragraph index="277" node_type="writer">4.0.2 Instal·lació i configuració d’eines</paragraph>
+ <paragraph index="278" node_type="writer">Abans de començar el desenvolupament com a tal, s’han instal·lat totes les eines necessàries:</paragraph>
+ <paragraph index="279" node_type="writer">Laravel HA12, amb PHP 8.3 i MySQL com a base de dades.</paragraph>
+ <paragraph index="280" node_type="writer">Laravel Breeze amb Blade i Tailwind CSS.</paragraph>
+ <paragraph index="281" node_type="writer">Vite com a bundler de JavaScript i CSS.</paragraph>
+ <paragraph index="282" node_type="writer">Composer per a la gestió de dependències PHP.</paragraph>
+ <paragraph index="283" node_type="writer">npm per a dependències de frontend com Tailwind i Laravel Echo.</paragraph>
+ <paragraph index="284" node_type="writer">A més, s’ha creat un entorn de desenvolupament local funcional i s’ha començat a preparar la base del projecte.</paragraph>
+ <paragraph index="285" node_type="writer">4.0.3 Creació del repositori GitHub</paragraph>
+ <paragraph index="286" node_type="writer">S’ha creat un repositori públic a GitHub per controlar les versions i facilitar la col·laboració. S’han fet commits freqüents per registrar cada canvi, tant de funcionalitats com d’estils, estructures de carpetes i proves. Això també ha ajudat a revisar errors i fer alguns canvits.</paragraph>
+ <paragraph index="287" node_type="writer">4.1 ESPECIFICACIÓ I DISSENY PREVI</paragraph>
+ <paragraph index="288" node_type="writer">Aquesta fase s’ha centrat en definir exactament què havia de fer l’aplicació, com havia de comportar-se i com seria la seua estructura tant visual com interna. A més, s’han documentat els requisits i s’han fet les primeres proves visuals i tècniques per garantir que el projecte fora viable.</paragraph>
+ <paragraph index="289" node_type="writer">4.1.1 Requisits i funcionalitats principals</paragraph>
+ <paragraph index="290" node_type="writer">S’ha establert una llista clara dels requisits essencials:</paragraph>
+ <paragraph index="291" node_type="writer">Suport per a rols d’alumne i professor.</paragraph>
+ <paragraph index="292" node_type="writer">Control de la IA per part del professor.</paragraph>
+ <paragraph index="293" node_type="writer">Persistència de context amb Gemini 2.5.</paragraph>
+ <paragraph index="294" node_type="writer">Visualització i supervisió de converses.</paragraph>
+ <paragraph index="295" node_type="writer">Xat en temps real amb interaccions limitades per alumne.</paragraph>
+ <paragraph index="296" node_type="writer">4.1.2 Model E/R i diagrames UML</paragraph>
+ <paragraph index="297" node_type="writer">A partir dels requisits s’ha creat el model entitat-relació que inclou taules com usuaris, converses, missatges i contexts. També s’han fet diagrames UML per visualitzar les relacions entre models, especialment les dependències entre usuari-conversa-context. Els camps com email, rol, usuari_id, context_id, creat_per, conversa_id, actiu i gemini_history_id s’han marcat com a indexats per millorar el rendiment.</paragraph>
+ <paragraph index="299" node_type="writer">4.1.3 Prototip inicial amb Figma</paragraph>
+ <paragraph index="300" node_type="writer">Per a la part visual, s’ha utilitzat Figma per fer un esbós inicial de com seria el panell del professor i la vista del xat per a l’alumne. Aquest prototip ha ajudat a identificar possibles problemes d’usabilitat i ha servit de base per a les primeres vistes Blade.
+
+Xat del Alumne:</paragraph>
+ <paragraph index="301" node_type="writer">Aquest a vista es la del Xat del alumne, tota la interacció d’aquest amb l’aplicació serà a través d’aquesta vista i del perfil d’usuari. Hi haurà un camp per a introduir els missatges de l’alumne i la IA contestara al xat.</paragraph>
+ <paragraph index="302" node_type="writer">Panell Professor:
+
+</paragraph>
+ <paragraph index="303" node_type="writer">Aquest será el panell de configuració del professor. Açí podrá veure el context actiu, seleccionar l’alumne i vore tant la seua conversa actual com les anteriors.</paragraph>
+ <paragraph index="304" node_type="writer">4.1.4 Disseny de rutes i controladors a Laravel</paragraph>
+ <paragraph index="305" node_type="writer">S’han començat a planificar les rutes de Laravel seguint la lògica RESTful i s’han estructurat els controladors com ConversaController, MissatgeController, ContextController i PanellProfessorController, així com alguns serveis com GeminiService. Aquesta estructura s’ha anat refinant al llarg del projecte.</paragraph>
+ <paragraph index="307" node_type="writer">Algunes rutes a web.php</paragraph>
+ <paragraph index="308" node_type="writer">Algun controlador de ContextController.php:</paragraph>
+ <paragraph index="309" node_type="writer">
+
+Part de GeminiService.php:
+
+</paragraph>
+ <paragraph index="310" node_type="writer">4.2 DESENVOLUPAMENT BACKEND</paragraph>
+ <paragraph index="311" node_type="writer">En aquesta fase s’ha centrat a construir tota la lògica del servidor, les connexions amb la base de dades i la gestió de la informació entre les diferents entitats. S’ha assegurat que les relacions entre models estiguen ben definides i que es puguen recuperar fàcilment des de les vistes.</paragraph>
+ <paragraph index="312" node_type="writer">4.2.1 Creació de models, migracions i relacions</paragraph>
+ <paragraph index="313" node_type="writer">S’han generat les migracions per a les taules usuaris, contexts, converses i missatges, definint clarament les relacions entre elles amb claus foranes.</paragraph>
+ <paragraph index="314" node_type="writer">Cada usuari pot tindre diverses converses i si es professor pot crear diversos contextos.</paragraph>
+ <paragraph index="315" node_type="writer">Cada conversa està associada a un context i un usuari.</paragraph>
+ <paragraph index="316" node_type="writer">Cada missatge pertany a una conversa concreta.</paragraph>
+ <paragraph index="317" node_type="writer">Els contexts defineixen el comportament de la IA i poden ser reutilitzats per diversos alumnes.</paragraph>
+ <paragraph index="318" node_type="writer">Aquestes relacions també s’han declarat als models Eloquent per a permetre consultes dinàmiques i senzilles des del backend.</paragraph>
+ <paragraph index="319" node_type="writer">4.2.2 Autenticació amb Laravel Sanctum</paragraph>
+ <paragraph index="320" node_type="writer">Per a la gestió de sessions i seguretat s’ha implementat Laravel Breeze amb Laravel Sanctum. El sistema d’autenticació inclou gestió de rols (alumne i professor) i protecció de rutes mitjançant middleware específics per a cada tipus d’usuari.</paragraph>
+ <paragraph index="321" node_type="writer">4.2.3 Controladors i serveis per a la gestió d’usuaris</paragraph>
+ <paragraph index="322" node_type="writer">S’han creat controladors responsables de gestionar:</paragraph>
+ <paragraph index="323" node_type="writer">La creació i visualització de converses.</paragraph>
+ <paragraph index="324" node_type="writer">L'enviament i registre de missatges.</paragraph>
+ <paragraph index="325" node_type="writer">La visualització i gestió de contextos.</paragraph>
+ <paragraph index="326" node_type="writer">També s’ha desenvolupat un servei anomenat GeminiService, que enumenarem a continuació. Aquest servei es l’encarregat de centralitzar totes les peticions a l’API de Gemini. D’aquesta manera, si es realitzen canvis a la configuració de l’API o a la lògica de missatges, només cal modificar aquest component.</paragraph>
+ <paragraph index="327" node_type="writer">4.3 Integració de Gemini 2.5</paragraph>
+ <paragraph index="328" node_type="writer">Durant aquesta fase s’ha integrat l’assistent d’intel·ligència artificial de Google anomenat Gemini 2.5 Flash. L’objectiu ha sigut permetre que cada alumne puga conversar amb la IA dins d’un context educatiu, establit prèviament pel professor, mantenint una comunicació coherent i segura.</paragraph>
+ <paragraph index="329" node_type="writer">4.3.1 Configuració de l’API</paragraph>
+ <paragraph index="330" node_type="writer">S’ha configurat la connexió amb l’API de Gemini mitjançant una clau d’API definida al fitxer .env. Per centralitzar i aïllar la lògica de comunicació, s’ha creat un servei (GeminiService) que gestiona tant la construcció de la petició com el processament de la resposta.</paragraph>
+ <paragraph index="331" node_type="writer">Gemini 2.5 permet utilitzar identificadors d’historial (historyId) per mantindre la coherència en la conversa. Aquesta funcionalitat s’ha aprofitat per a reduir la quantitat de dades enviades i per a donar una experiència més fluida a l’alumne.</paragraph>
+ <paragraph index="332" node_type="writer">4.3.2 Comunicació amb la IA</paragraph>
+ <paragraph index="333" node_type="writer">Cada vegada que un alumne envia un missatge, es construeix l’historial complet de la conversa i s’envia a l’API. La resposta es desa automàticament com un nou missatge, associat a la conversa en curs.</paragraph>
+ <paragraph index="334" node_type="writer">A més, es controla el nombre d’interaccions restants en cada conversa. Quan aquest valor arriba a zero, es bloqueja temporalment l’enviament de nous missatges fins que el professor active un nou context o augmente el límit.</paragraph>
+ <paragraph index="335" node_type="writer">4.3.3 Emmagatzematge i processament de converses</paragraph>
+ <paragraph index="336" node_type="writer">Les converses es guarden a la base de dades amb informació com el context_id, el gemini_history_id i les interaccions restants. Totes les respostes de la IA es registren a la taula de missatges, amb el remitent ia.</paragraph>
+ <paragraph index="338" node_type="writer">També s’ha implementat un sistema bàsic de validació per evitar duplicats, truncaments o errors de format en les respostes de l’assistent.</paragraph>
+ <paragraph index="339" node_type="writer">
+</paragraph>
+ <paragraph index="340" node_type="writer">4.4 IMPLEMENTACIÓ DEL XAT I WEBSOCKETS</paragraph>
+ <paragraph index="341" node_type="writer">Aquesta fase s’ha centrat a construir la funcionalitat del xat entre l’alumne i la IA. Ha sigut una de les parts més importants del projecte, ja que ha requerit la integració entre backend i frontend, així com la prova de tecnologies en temps real com Laravel Echo i Pusher. També s’ha treballat en l’estètica i estructura de les vistes per a fer el xat còmode i intuïtiu tant per a l’alumnat com per al professorat.</paragraph>
+ <paragraph index="342" node_type="writer">4.4.1 Desenvolupament inicial de les vistes</paragraph>
+ <paragraph index="343" node_type="writer">4.4.1.1 Configuració inicial amb Blade i Tailwind</paragraph>
+ <paragraph index="344" node_type="writer">S’han creat les primeres vistes Blade com chat.blade.php per als alumnes i index.blade.php dins del panell del professor. S’ha utilitzat Tailwind CSS per estructurar les interfícies i permetre un disseny responsive. També s’ha separat el disseny en components reutilitzables.</paragraph>
+ <paragraph index="345" node_type="writer">4.4.1.2 Estils bàsics amb CSS</paragraph>
+ <paragraph index="346" node_type="writer">S’han afegit estils propis mitjançant una fulla custom.css per ajustar colors, gradients, transicions i elements visuals com botons o el panell del xat. També s’ha aplicat un sistema de mode fosc amb canvis dinàmics a través de JavaScript.</paragraph>
+ <paragraph index="347" node_type="writer">4.4.2 Implementació del xat amb Livewire/AJAX</paragraph>
+ <paragraph index="348" node_type="writer">Tot i que inicialment es va considerar Livewire, finalment s’ha optat per AJAX pur amb JavaScript per enviar missatges i rebre respostes de Gemini. Aquest sistema ha permés integrar el control de la conversa, actualitzar el DOM amb les respostes i mantindre la interacció fluïda sense recarregar la pàgina.</paragraph>
+ <paragraph index="349" node_type="writer">4.4.3 Connexió frontend-backend</paragraph>
+ <paragraph index="350" node_type="writer">El fitxer chat.js s’encarrega de gestionar els esdeveniments de formulari, enviar les peticions POST al controlador GeminiController i actualitzar la vista amb la resposta. També controla el nombre d’interaccions restants i bloqueja l’enviament si s’esgoten. S’ha garantit la connexió fluida entre frontend i backend amb gestió d’errors i feedback visual.</paragraph>
+ <paragraph index="351" node_type="writer">4.4.4 Ampliació i refinament de les vistes </paragraph>
+ <paragraph index="352" node_type="writer">4.4.4.1 Vistes específiques d'alumnes</paragraph>
+ <paragraph index="353" node_type="writer">S’ha dissenyat una vista simplificada per a l’alumnat, on es mostra únicament el xat i les interaccions restants. Aquesta vista s’ha optimitzat perquè siga clara, lleugera i usable des de qualsevol dispositiu.</paragraph>
+ <paragraph index="354" node_type="writer">4.4.4.2 Vistes específiques del professor</paragraph>
+ <paragraph index="355" node_type="writer">Al panell del professor s’ha afegit un sistema per seleccionar un alumne i veure les seues converses en temps real, incloent missatges i context actiu. També s’ha afegit la possibilitat de bloquejar l’accés a la IA o canviar el context actiu.</paragraph>
+ <paragraph index="356" node_type="writer">4.4.5 Implementació Broadcasting amb Laravel Echo i Pusher</paragraph>
+ <paragraph index="357" node_type="writer">Per a la comunicació en temps real s’ha utilitzat Laravel Echo amb Pusher. S’ha configurat broadcasting.php per usar el canal privat conversa.{id} i xat-alumne.{id}. S’han emés esdeveniments com NouMissatgeAlumne i ContextCanviat per actualitzar la vista del professor i la del xat de l’alumne de forma instantània. També s’ha provat amb Laravel WebSockets (BeyondCode), però es va descartar per problemes amb Laravel 12.</paragraph>
+ <paragraph index="358" node_type="writer">4.5 Control i gestió del professor</paragraph>
+ <paragraph index="359" node_type="writer">Durant aquesta fase s’han desenvolupat les funcionalitats específiques per al rol de professor. L’objectiu ha sigut oferir un panell des del qual es puga supervisar l’activitat dels alumnes, gestionar els contextos i bloquejar l’accés a la IA quan siga necessari.</paragraph>
+ <paragraph index="360" node_type="writer">4.5.1 Panell professor</paragraph>
+ <paragraph index="361" node_type="writer">S’ha creat una vista específica dins la carpeta panell-professor que actua com a panell de control. Aquesta vista permet:</paragraph>
+ <paragraph index="362" node_type="writer">Veure la configuració activa de la IA i el context seleccionat.</paragraph>
+ <paragraph index="363" node_type="writer">Visualitzar un llistat d’alumnes reals registrats a l’aplicació.</paragraph>
+ <paragraph index="364" node_type="writer">Seleccionar un alumne per accedir al seu xat.</paragraph>
+ <paragraph index="365" node_type="writer">Canviar a conversacions antigues dels alumnes segons les necessitats del professor.</paragraph>
+ <paragraph index="366" node_type="writer">Controlar el número de interaccions dels alumnes per al context aplicat, pugen bloquejar-lo actualitzant el context a 0 interaccions.</paragraph>
+ <paragraph index="367" node_type="writer">Aquestes funcionalitats s’han implementat combinant rutes protegides amb middleware i components dinàmics que s’actualitzen amb AJAX o Laravel Echo.</paragraph>
+ <paragraph index="368" node_type="writer">4.5.2 Historial de converses per alumne</paragraph>
+ <paragraph index="369" node_type="writer">Quan el professor selecciona un alumne, es mostra a la dreta un panell amb totes les converses que ha tingut eixe alumne. Aquest llistat inclou:</paragraph>
+ <paragraph index="370" node_type="writer">La data de creació de cada conversa.</paragraph>
+ <paragraph index="371" node_type="writer">El context actiu que estava seleccionat en aquell moment.</paragraph>
+ <paragraph index="372" node_type="writer">L’estat de la conversa (activa o arxivada).</paragraph>
+ <paragraph index="373" node_type="writer">També s’ha preparat la funcionalitat per carregar cada conversa individual amb els seus missatges, la qual cosa permet revisar de manera detallada què s’ha parlat i com ha interaccionat l’alumne amb la IA.</paragraph>
+ <paragraph index="374" node_type="writer">4.6 Seguretat, Optimització i Pujada</paragraph>
+ <paragraph index="375" node_type="writer">Aquesta fase ha tingut com a objectiu revisar la seguretat del projecte, millorar el seu rendiment i preparar-lo per a l’entorn de producció.</paragraph>
+ <paragraph index="376" node_type="writer">4.6.1 Revisió seguretat API i autenticació</paragraph>
+ <paragraph index="377" node_type="writer">S’ha revisat que totes les rutes sensibles estiguen protegides amb middleware d’autenticació (auth:sanctum) i que els rols d’alumne i professor tinguen accés exclusiu a les funcionalitats que els pertoquen. A més, s’ha aplicat control d’accés a nivell de controladors per evitar que un usuari interactue amb dades que no li corresponen.</paragraph>
+ <paragraph index="378" node_type="writer">S’han aplicat també bones pràctiques com l’ús de tokens segurs, validació estricta de les dades d’entrada i gestió d’errors personalitzada per evitar exposar informació interna.</paragraph>
+ <paragraph index="379" node_type="writer">4.6.2 Optimització rendiment</paragraph>
+ <paragraph index="380" node_type="writer">Per millorar el rendiment del sistema, s’han indexat els camps clau de la base de dades (usuari_id, context_id, creat_per, conversa_id, actiu, etc.). Això ha permés accelerar les consultes Eloquent i millorar la càrrega de les vistes que mostren informació dependent d’altres models.</paragraph>
+ <paragraph index="381" node_type="writer">A més, s’ha evitat la càrrega innecessària de relacions no usades i s’han afegit consultes amb with() per fer eager loading i evitar el problema N+1.</paragraph>
+ <paragraph index="382" node_type="writer">4.6.3 Correcció errors</paragraph>
+ <paragraph index="383" node_type="writer">Durant la fase de proves s’han detectat i corregit errors visuals, problemes amb el recompte d’interaccions, fallades en el broadcasting i errors en les rutes. També s’han corregit comportaments inesperats en el xat, com missatges duplicats o bloquejos quan s’esgotaven les interaccions.</paragraph>
+ <paragraph index="384" node_type="writer">S’ha utilitzat Laravel Telescope per ajudar a depurar i fer seguiment dels esdeveniments, respostes de l’API i comportament general de l’aplicació.</paragraph>
+ <paragraph index="385" node_type="writer">4.6.4 Ajustos Finals.</paragraph>
+ <paragraph index="386" node_type="writer">Abans de pujar el projecte a producció, s’han aplicat diversos ajustos menors que han contribuït a polir l’experiència d’ús i garantir la consistència del sistema. Entre aquestes millores s’inclouen:</paragraph>
+ <paragraph index="387" node_type="writer">Sistema d’enviament de missatges refinat, controlant millor el nombre d’interaccions i les condicions de bloqueig.</paragraph>
+ <paragraph index="388" node_type="writer">Traducció d’etiquetes i missatges d’interfície al valencià, per garantir una coherència lingüística en tota l’aplicació.</paragraph>
+ <paragraph index="389" node_type="writer">Millores visuals en el mode fosc, especialment en botons, scrolls i contrastos.</paragraph>
+ <paragraph index="390" node_type="writer">Corregits errors menors com duplicats visuals, icones mal posicionades o vistes que no es carregaven bé.</paragraph>
+ <paragraph index="391" node_type="writer">Aquests canvis finals han sigut importants per oferir una aplicació sòlida, funcional i agradable de fer servir abans de la pujada definitiva.</paragraph>
+ <paragraph index="392" node_type="writer">4.6.5 Pujada GitHub</paragraph>
+ <paragraph index="393" node_type="writer">Un cop completat el desenvolupament, s’ha pujat el projecte a GitHub com a còpia definitiva. El repositori inclou tota la documentació, fitxers .env,  i scripts útils per posar en marxa l’entorn. Això permet tindre una còpia segura, fàcilment clonable i preparada per a possibles millores futures o presentacions.</paragraph>
+ <paragraph index="394" node_type="writer">Es pot accedir mitjançant el enllaços següents:</paragraph>
+ <paragraph index="395" node_type="writer">https://projecteeina.es/
+
+https://github.com/jpeiroaguado/Projecte-EINA</paragraph>
+ <paragraph index="396" node_type="writer">4.7 Documentació tècnica</paragraph>
+ <paragraph index="397" node_type="writer">Aquesta mateixa documentació cobreix de manera detallada els aspectes tècnics del projecte: estructura, fases de desenvolupament, eines emprades i decisions preses. Per aquest motiu, no s’ha elaborat un manual d’usuari específic, ja que les funcionalitats es descriuen juntament amb les seues vistes i comportaments dins d’aquesta mateixa memòria, a part de que la complexitat d’us no es alta.</paragraph>
+ <paragraph index="398" node_type="writer">5.  Estructura Visual de l’aplicació</paragraph>
+ <paragraph index="399" node_type="writer">5.1 Estils personalitzats i mode fosc</paragraph>
+ <paragraph index="400" node_type="writer">L’aplicació ha sigut dissenyada amb Tailwind CSS seguint una estètica pròpia i coherent, amb l’objectiu de garantir una bona experiència d’usuari.
+S’han aplicat els següents elements visuals destacats:</paragraph>
+ <paragraph index="401" node_type="writer">Tipografia Roboto com a font principal.</paragraph>
+ <paragraph index="402" node_type="writer">Botons personalitzats amb gradient i estils adaptats a mode clar i fosc.</paragraph>
+ <paragraph index="403" node_type="writer">Scrolls estilitzats, formularis cuidats i missatges de sistema visuals.</paragraph>
+ <paragraph index="404" node_type="writer">Transicions suaus per a canvis de tema i elements interactius.</paragraph>
+ <paragraph index="405" node_type="writer">El mode fosc ha sigut implementat per defecte, permetent un ús còmode en entorns amb poca llum i reforçant l’aspecte modern de la interfície.</paragraph>
+ <paragraph index="406" node_type="writer">5.2 Interfície final de l’aplicació</paragraph>
+ <paragraph index="407" node_type="writer">A continuació es mostren diverses captures de la versió final de l’aplicació:</paragraph>
+ <paragraph index="408" node_type="writer">Vista de l’alumne, amb el xat en temps real amb la IA, el comptador d’interaccions i l’adaptació responsive.</paragraph>
+ <paragraph index="410" node_type="writer">Vista del professor, amb el panell de control per a gestionar contextos, visualitzar converses i controlar l’activitat dels alumnes.
+</paragraph>
+ <paragraph index="411" node_type="writer">Diferents seccions comunes amb disseny consistent, traduccions al valencià i elements clars i accessibles.</paragraph>
+ <paragraph index="412" node_type="writer">Aquestes pantalles representen l’aspecte real de l’aplicació en funcionament després del desplegament final.</paragraph>
+ <paragraph index="414" node_type="writer">6.  Bibliografia</paragraph>
+ <paragraph index="415" node_type="writer">6.1 Llibres i vídeos</paragraph>
+ <paragraph index="416" node_type="writer">Tailwind CSS: From Zero to Production.</paragraph>
+ <paragraph index="417" node_type="writer">Vídeos de Laravel Breeze i Laravel Echo.</paragraph>
+ <paragraph index="418" node_type="writer">6.2 Manuals web</paragraph>
+ <paragraph index="419" node_type="writer">https://laravel.com/docs – Documentació oficial de Laravel.</paragraph>
+ <paragraph index="420" node_type="writer">https://tailwindcss.com/docs – Guia completa de Tailwind CSS.</paragraph>
+ <paragraph index="421" node_type="writer">https://pusher.com/docs – Manual per a integrar Pusher amb Laravel.</paragraph>
+ <paragraph index="422" node_type="writer">https://ai.google.dev/gemini-api/ Documentació oficial de Gemini API.</paragraph>
+ <paragraph index="423" node_type="writer">https://laravel-livewire.com/docs – (opcional) per a proves amb Livewire.</paragraph>
+ <paragraph index="424" node_type="writer">6.3 Foros i blogs</paragraph>
+ <paragraph index="425" node_type="writer">Stack Overflow: dubtes sobre Laravel, Tailwind i APIs.</paragraph>
+ <paragraph index="426" node_type="writer">GitHub Discussions en els repositoris oficials de Laravel i Pusher.</paragraph>
+ <paragraph index="427" node_type="writer">Laravel.io i Laracasts Forum.</paragraph>
+ <paragraph index="428" node_type="writer">7 Anàlisi i valoració d'alternatives</paragraph>
+ <paragraph index="429" node_type="writer">7.1 Anàlisi i conclusions</paragraph>
+ <paragraph index="430" node_type="writer">7.1.1 Objectius</paragraph>
+ <paragraph index="431" node_type="writer">Els objectius inicials del projecte EINA eren clars: desenvolupar una eina per a l’aula que permetera als alumnes comunicar-se amb una IA educativa dins d’un entorn controlat pel professorat. Aquesta IA havia de ser capaç de mantenir contextos persistents, limitar el nombre d’interaccions i adaptar-se a diferents rols pedagògics. A més, es buscava facilitar la supervisió docent i reduir la barrera d’entrada a la IA en el context educatiu.</paragraph>
+ <paragraph index="432" node_type="writer">7.1.2 Conclusions</paragraph>
+ <paragraph index="433" node_type="writer">S’han aconseguit la gran majoria dels objectius marcats. El sistema implementat permet un ús real de la IA en l’aula, amb control del nombre d’interaccions, canvis de context, bloqueig de l’assistent i visió global del que fan els alumnes. A nivell tècnic, el projecte ha servit per posar en pràctica coneixements de Laravel, gestió d’API, WebSockets i integració amb serveis externs com Gemini.</paragraph>
+ <paragraph index="434" node_type="writer">7.1.3 Autoavaluació</paragraph>
+ <paragraph index="435" node_type="writer">El projecte s’ha desenvolupat dins del temps previst, tot i haver tingut fases molt complicades com la configuració del broadcasting. La funcionalitat cobreix els requisits marcats i el resultat és usable. Tot i això, es podria millorar l’aspecte visual de certes vistes i optimitzar millor les consultes per a escenaris amb molts alumnes o converses.</paragraph>
+ <paragraph index="436" node_type="writer">7.2 Millores o alternatives proposades</paragraph>
+ <paragraph index="437" node_type="writer">Integrar OAuth per gestionar millor l’accés a l’API en lloc d’usar una clau pública.</paragraph>
+ <paragraph index="438" node_type="writer">Implementar un panell d’estadístiques per al professorat.</paragraph>
+ <paragraph index="439" node_type="writer">Millorar la usabilitat per a mòbils i afegir funcionalitats com cerca de converses.</paragraph>
+ <paragraph index="440" node_type="writer">Explorar WebSockets propis en lloc de Pusher, si la compatibilitat amb Laravel millora.</paragraph>
+ <paragraph index="441" node_type="writer">Al final, EINA es un prototip per demostrar el poder que pot tindre una aplicació controlant una IA a l’aula. Amb models propis o lliures, i un servidor web a la Generalitat que la contingui, les possibilitats son cassi infinites.</paragraph>
+ <paragraph index="442" node_type="writer">7.3 Agraïments</paragraph>
+ <paragraph index="443" node_type="writer">Gràcies al professor Eloy Gutiérrez Paredes pel seu suport constant i orientació durant tot el procés de desenvolupament. També a l’equip docent de DAW i a Javier García Sabater per aportar la idea i fer un ‘brainstrorming’. Sense aquest entorn col·laboratiu, aquest treball no hauria sigut el mateix.</paragraph>
+ <paragraph index="444" node_type="writer">I per últim agrair al meu tutor Kike Savall tota l’ajuda durant el curs, inclús abans...</paragraph>
+ <paragraph index="445" node_type="writer">7.4 Dificultats trobades.
+
+Al principi, s’ha creat funcions al controlador de GeminiController que després conforme ha anat evolucionant l’aplicació s’ha fet obvi que hi havia que re-ubicar-les a controladors més específics.</paragraph>
+ <paragraph index="446" node_type="writer">Un problema que s’ha trobat i que s’ha repetit durant el projecte ha sigut la interoperabilitat del sistema, amb els servicis d’autorització i els serveis externs. Moltes vegades l’aplicació fallava silenciosament.</paragraph>
+ <paragraph index="447" node_type="writer">Tots aquest problemes venen de que Laravel 12 ha perdut compatibilitat amb WebSockets i s’ha de fer amb Pusher i Echo, el que dificulta el control de les cues d’esdeveniments.</paragraph>
+ <paragraph index="448" node_type="writer">S’ha sol-ventat fent funcions dins del servei de autorització al que deixaven accedir al professor amés de l’alumne, estant el professor identificat per a poder accedir als xats dels alúmnes.</paragraph>
+ <paragraph index="449" node_type="writer">Els estils de Tailwind maceraven el CSS natiu que s’intentava inserir.</paragraph>
+ <paragraph index="450" node_type="writer">S’ha sol-ventat fent eixes modificacions directament al @layer utilites, que modifica els estils natius de tailwind.</paragraph>
+ <paragraph index="451" node_type="writer">7.5 Relació amb els mòduls estudiats.
+
+Tots els moduls pràctics que he donat a aquest curs han sigut claus per a la creació d’aquest projecte.</paragraph>
+ <paragraph index="452" node_type="writer">Disseny d’Interficies Web: Els estils de Tailwind CSS no deixen de ser una abreviatura de CSS. Tailwind treballa amb css grid i així ha sigut estructurada la aplicació visualment. Sense el coneixement de com funciona el grid, no haguera sigut possible treballar amb Tailwind ni tampoc tindre coneixements sobre els selectors interns d’aquest.</paragraph>
+ <paragraph index="453" node_type="writer">Desplegament d’Aplicacions Web: També ha sigut necessari ja que s’ha instal-lat un servidor Nginx amb certificats SSL i s’ha configurat tot l’entorn en local, per a després pujar-lo a producció.</paragraph>
+ <paragraph index="454" node_type="writer">Desenvolupament Web en entorn Client: Clau per al funcionament interactiu de l’aplicació i sobre tot de la comunicació amb Gemini, gràcies a la experiència obtinguda en interaccions amb API/Json ha sigut un element molt important del projecte.</paragraph>
+ <paragraph index="455" node_type="writer">Desenvolupament WEB en entorn servidor: La columna vertebral de l’aplicació. Construït amb LARAVEL ha sigut el mòdul més destacat a aquest projecte.
+Controladors, Rutes, Models, Taules, Vistes i un llarg etc. Controlar tots els elements ha sigut desafiant, però sense aquest coneixement no haguera sigut possible EINA. </paragraph>
+ <paragraph index="457" node_type="writer">8 Annexos</paragraph>
+ <paragraph index="458" node_type="writer">8.1 Estructura de carpetes</paragraph>
+ <paragraph index="462" node_type="writer">8.2 Diagrames</paragraph>
+ <paragraph index="463" node_type="writer">8.2.1 Diagrama E/R</paragraph>
+ <paragraph index="464" node_type="writer">El model Entitat-Relació del projecte EINA està compost per quatre taules principals: usuaris, contexts, converses i missatges. A continuació es descriu cada taula i la seua relació amb les altres:</paragraph>
+ <paragraph index="465" node_type="writer">usuaris</paragraph>
+ <paragraph index="466" node_type="writer">Conté la informació bàsica de cada usuari registrat: nom, email (únic), contrasenya i rol (alumne o professor).</paragraph>
+ <paragraph index="467" node_type="writer">Disposa d’un camp interaccions_restants, tot i que esta funcionalitat finalment s’ha gestionat des del model converses.</paragraph>
+ <paragraph index="468" node_type="writer">Relacions:</paragraph>
+ <paragraph index="469" node_type="writer">Un usuari pot crear múltiples contextos (contexts.creat_per).</paragraph>
+ <paragraph index="470" node_type="writer">Un usuari pot tindre múltiples converses (converses.usuari_id).</paragraph>
+ <paragraph index="471" node_type="writer">Indexats:</paragraph>
+ <paragraph index="472" node_type="writer">email (per a login).</paragraph>
+ <paragraph index="473" node_type="writer">rol (per a gestió de permisos i vistes).</paragraph>
+ <paragraph index="474" node_type="writer">contexts</paragraph>
+ <paragraph index="475" node_type="writer">Representa un context pedagògic definit pel professor, amb un títol, descripció completa i resumida.</paragraph>
+ <paragraph index="476" node_type="writer">Inclou el nombre màxim d’interaccions per conversa (interaccions_max) i un booleà per marcar si està actiu (actiu).</paragraph>
+ <paragraph index="477" node_type="writer">Relacions:</paragraph>
+ <paragraph index="478" node_type="writer">Cada context pertany a un usuari (professor) mitjançant creat_per.</paragraph>
+ <paragraph index="479" node_type="writer">Pot estar associat a múltiples converses (converses.context_id).</paragraph>
+ <paragraph index="480" node_type="writer">Indexats:</paragraph>
+ <paragraph index="481" node_type="writer">actiu (per recuperar ràpidament el context actual).</paragraph>
+ <paragraph index="482" node_type="writer">creat_per (per filtrar els contextos d’un professor).</paragraph>
+ <paragraph index="483" node_type="writer">converses</paragraph>
+ <paragraph index="484" node_type="writer">Representa una conversa entre un alumne i la IA.</paragraph>
+ <paragraph index="485" node_type="writer">Emmagatzema la referència al context usat (context_id), l’usuari que la comença (usuari_id), i el gemini_history_id per mantenir el context persistent amb Gemini.</paragraph>
+ <paragraph index="486" node_type="writer">També registra el nombre d’interaccions restants.</paragraph>
+ <paragraph index="487" node_type="writer">Relacions:</paragraph>
+ <paragraph index="488" node_type="writer">Cada conversa pertany a un usuari i a un context.</paragraph>
+ <paragraph index="489" node_type="writer">Pot contindre molts missatges (missatges.conversa_id).</paragraph>
+ <paragraph index="490" node_type="writer">Indexats:</paragraph>
+ <paragraph index="491" node_type="writer">usuari_id, context_id, gemini_history_id.</paragraph>
+ <paragraph index="492" node_type="writer">missatges</paragraph>
+ <paragraph index="493" node_type="writer">Conté els missatges que formen part d’una conversa.</paragraph>
+ <paragraph index="494" node_type="writer">Guarda el cos del missatge i qui és el remitent (alumne o ia).</paragraph>
+ <paragraph index="495" node_type="writer">Relacions:</paragraph>
+ <paragraph index="496" node_type="writer">Cada missatge pertany a una conversa.</paragraph>
+ <paragraph index="497" node_type="writer">Indexat:</paragraph>
+ <paragraph index="498" node_type="writer">conversa_id.</paragraph>
+ <paragraph index="499" node_type="writer">8.2.2 Diagrama de classes:</paragraph>
+ <paragraph index="501" node_type="writer">8.2.3 Diagrama de Flux de l’aplicació:</paragraph>
+</indexing>

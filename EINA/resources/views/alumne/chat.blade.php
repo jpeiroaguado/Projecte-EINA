@@ -2,6 +2,8 @@
 
 @section('content')
     <div class="w-full max-w-6xl mx-auto mt-6 px-4 flex flex-col h-[calc(100vh-8rem)]">
+
+        {{-- Títol del Xat --}}
         <div class="flex justify-between items-center mb-4">
             <div>
                 <h2 class="text-xl font-bold text-gray-800 dark:text-white">
@@ -12,49 +14,65 @@
                     </svg>
                     Xat amb la IA
                 </h2>
-                @if ($conversa->context && $conversa->context->descripcio_curta)
+
+                @if ($conversa && $conversa->context && $conversa->context->descripcio_curta)
                     <p id="context-descripcio" class="text-sm text-gray-600 dark:text-gray-300 italic">
                         {{ $conversa->context->descripcio_curta }}
                     </p>
                 @endif
             </div>
+
             <div class="bg-gray-200 text-gray-800 px-3 py-1 rounded text-sm font-semibold">
-                Interaccions restants: <span id="interaccions-restants">{{ $conversa->interaccions_restants }}</span>
+                @if ($conversa)
+                    Interaccions restants: <span id="interaccions-restants">{{ $conversa->interaccions_restants }}</span>
+                @else
+                    <span class="text-gray-400 italic">Encara no has començat cap conversa</span>
+                @endif
             </div>
         </div>
 
-        <div class="flex flex-col flex-grow overflow-hidden">
-            <div id="missatges"
-                 class="overflow-y-auto flex-grow bg-white p-4 rounded shadow mb-4 space-y-4">
-                @foreach ($conversa->missatges as $missatge)
-                    <div class="{{ $missatge->remitent === 'alumne' ? 'text-right' : 'text-left' }}">
-                        <span
-                            class="{{ $missatge->remitent === 'alumne' ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800' }} px-4 py-2 rounded-2xl inline-block max-w-[90%]">
-                            {!! $missatge->formatat() !!}
-                        </span>
-                    </div>
-                @endforeach
-            </div>
+        {{-- Contingut del xat només si hi ha conversa --}}
+        @if ($conversa)
+            <div class="flex flex-col flex-grow overflow-hidden">
+                <div id="missatges"
+                    class="overflow-y-auto flex-grow bg-white p-4 rounded shadow mb-4 space-y-4">
+                    @foreach ($conversa->missatges as $missatge)
+                        <div class="{{ $missatge->remitent === 'alumne' ? 'text-right' : 'text-left' }}">
+                            <span
+                                class="{{ $missatge->remitent === 'alumne' ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800' }} px-4 py-2 rounded-2xl inline-block max-w-[90%]">
+                                {!! $missatge->formatat() !!}
+                            </span>
+                        </div>
+                    @endforeach
+                </div>
 
-            <form id="formulari-xat"
-                  class="flex gap-4"
-                  data-conversa-id="{{ $conversaId }}"
-                  data-context-id="{{ $conversa->context->id }}">
-                @csrf
-                <textarea id="input-missatge" rows="1" class="flex-grow border rounded px-4 py-2 text-black resize-none" placeholder="Escriu el teu missatge..." required></textarea>
+                <form id="formulari-xat"
+                    class="flex gap-4"
+                    data-conversa-id="{{ $conversaId }}"
+                    data-context-id="{{ $conversa->context->id }}">
+                    @csrf
+                    <textarea id="input-missatge" rows="1" class="flex-grow border rounded px-4 py-2 text-black resize-none"
+                        placeholder="Escriu el teu missatge..." required></textarea>
 
-                <button type="submit"
+                    <button type="submit"
                         class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-                    Enviar
-                </button>
-            </form>
-        </div>
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        @else
+            <div class="text-center text-gray-500 dark:text-gray-300 mt-10 text-lg italic">
+                🕑 Encara no has començat cap conversa. Escriu el teu primer missatge per iniciar-la.
+            </div>
+        @endif
     </div>
 @endsection
 
-<script>
-    window.conversaId = {{ $conversa->id }};
-</script>
+@if ($conversa)
+    <script>
+        window.conversaId = {{ $conversa->id }};
+    </script>
+@endif
 
 @push('scripts')
     @vite('resources/js/chat.js')

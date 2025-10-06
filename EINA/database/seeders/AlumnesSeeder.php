@@ -13,7 +13,8 @@ class AlumnesSeeder extends Seeder
         $alumnes = [
             ['name' => 'Eloy', 'email' => 'eloy@eina.es'],
             ['name' => 'Kike', 'email' => 'kike@eina.es'],
-            ['name' => 'Carles', 'email'=> 'carles@eina.es'],
+            ['name' => 'Carles', 'email'=> 'juanjo@eina.es'],
+            ['name' => 'Alumne', 'email'=> 'alumne@eina.es'],
         ];
 
         foreach ($alumnes as $alumne) {
